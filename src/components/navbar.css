@@ -1,0 +1,60 @@
+
+.cool-link {
+    display: inline-block;
+    /* color: #000; */
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+}
+
+
+.coolw-link {
+    display: inline-block;
+    /* color: #000; */
+    text-decoration: none;
+}
+
+.coolw-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.coolw-link:hover::after {
+    width: 100%;
+}
+.coolM-link {
+    display: inline-block;
+    /* color: #000; */
+    text-decoration: none;
+}
+
+.coolM-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.coolM-link:hover::after {
+    width: 100%;
+}
+
+
+
