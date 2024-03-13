@@ -160,8 +160,9 @@ data_professionals.map((data,index)=>(
 <div className='w-10/12 py-14 xl:py-18 flex  flex-col items-center justify-center gap-10'>
 <p className='font-semibold text-black text-4xl text-center'>Partners</p>
 <div className='flex justify-center items-center xl:flex-col'>
-<img src={partner2} alt="" className='w-[200px] xl:'/>
 <img src={partner1} alt="" className='w-[200px]'/>
+<img src={partner2} alt="" className='w-[200px] xl:'/>
+<img src="https://media.licdn.com/dms/image/D4D0BAQG-DR_ezu-pXw/company-logo_200_200/0/1702297267921/weklever_logo?e=1718236800&v=beta&t=uuoGb756DuAvmX4pKpTIvs75k4EPoR-JtKVggxq-b-8" alt="" className='w-[100px] h-[100px]'/>
 </div>
 </div>
 

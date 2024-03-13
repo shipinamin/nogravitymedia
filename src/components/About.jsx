@@ -2,6 +2,9 @@ import React from 'react'
 
 import Herosection from './common/Herosection'
 import Cardcarousel from './Cardcarousel'
+import people1 from '../assets/ourpeople/PHOTO-2024-03-13-15-44-10.jpg'
+import people2 from '../assets/ourpeople/PHOTO-2024-03-13-15-47-19.jpg'
+import people3 from '../assets/ourpeople/WhatsApp Image 2024-03-13 at 18.15.26.jpeg'
 const About = () => {
 
   const data = [
@@ -21,6 +24,24 @@ const About = () => {
       title:"Reliability:",
       para:"When you choose No Gravity Media, you can trust that your project is in capable hands. We pride ourselves on delivering reliable, high-quality solutions, on time and within budget",
     },
+  ]
+
+  const our_peopledata=[
+    {
+      name:"Hashir Khan",
+      img:people1,
+      desination:"Founder"
+    },
+    {
+      name:"Saquib Abdullah",
+      img:people2,
+      desination:"Co-Founder"
+    },
+    {
+      name:"Nishat Alam",
+      img:people3,
+      desination:"Full Stack Developer"
+    }
   ]
 
   return (
@@ -60,6 +81,28 @@ const About = () => {
     <img src="https://www.isixsigma.com/wp-content/uploads/2018/11/shutterstock_1687550977-scaled.jpg" alt="" className='w-screen' />
 </div>
 
+
+<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 pt-24 pb-14 leading-10'>
+<p className='text-4xl font-bold'>Our People
+</p>
+
+<div>
+
+{
+our_peopledata.map((data,index) =>(
+
+<div className=' w-[300px] h-[350px]' key={index}>
+<img src={data.img} alt="" />
+<p className='text-[18px] font-bold'>{data.name}</p>
+<p className='text-[18px] font-semibold'>{data.desination}</p>
+</div>
+))
+}
+
+
+</div>
+
+</div>
 
 
 <div className='w-full bg-[#EFF0F1] flex flex-col items-center justify-center'>
