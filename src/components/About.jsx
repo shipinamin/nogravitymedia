@@ -5,6 +5,7 @@ import Cardcarousel from './Cardcarousel'
 import people1 from '../assets/ourpeople/PHOTO-2024-03-13-15-44-10.jpg'
 import people2 from '../assets/ourpeople/PHOTO-2024-03-13-15-47-19.jpg'
 import people3 from '../assets/ourpeople/WhatsApp Image 2024-03-13 at 18.15.26.jpeg'
+import people4 from '../assets/ourpeople/WhatsApp Image 2024-03-15 at 14.48.38.jpeg'
 const About = () => {
 
   const data = [
@@ -38,10 +39,16 @@ const About = () => {
       desination:"Co-Founder"
     },
     {
+      name:"Dhruv Sharma ",
+      img:people4,
+      desination:"UI/UX Designer"
+    },
+    {
       name:"Nishat Alam",
       img:people3,
       desination:"Full Stack Developer"
-    }
+    },
+   
   ]
 
   return (
@@ -65,7 +72,7 @@ const About = () => {
     data.map((data,index)=>(
 
 
-  <div>
+  <div key={index}>
 <p className='min-xl:text-2xl min-xl:leading-9 tracking-wider font-light'><span className='font-bold text:xl '>{data.title}</span> {data.para}</p>
 </div>
     ))}
@@ -82,24 +89,22 @@ const About = () => {
 </div>
 
 
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 pt-24 pb-14 leading-10'>
+<div className='w-[80%] xl:w-10/12  flex justify-center flex-col gap-5 pt-24 pb-14 leading-10'>
 <p className='text-4xl font-bold'>Our People
 </p>
 
-<div>
-
+<div className='grid grid-cols-3  xl:grid-cols-2 md:grid-cols-1 w-full    pb-[50px]  gap-[100px]'>
 {
 our_peopledata.map((data,index) =>(
 
 <div className=' w-[300px] h-[350px]' key={index}>
-<img src={data.img} alt="" />
+{/* <img src={data.img} alt="" className='w-[337px] h-[337px]'/> */}
+<div className='w-[337px] h-[337px] bg-center bg-cover' style={{backgroundImage: `url("${data.img}")`}}></div>
 <p className='text-[18px] font-bold'>{data.name}</p>
 <p className='text-[18px] font-semibold'>{data.desination}</p>
 </div>
 ))
 }
-
-
 </div>
 
 </div>

@@ -20,6 +20,7 @@ const Navbar = () => {
     const [shahdow, setshahdow] = useState('none');
     const [border, setborder] = useState('cool-link');
     const services_mega_menu = [
+      "UI/UX",
 "Digital Strategy and Planning",
 "Creative Strategy and Web Graphics Design",
  "Social Media Marketing ",
