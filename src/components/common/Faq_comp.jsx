@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { FaCirclePlus , FaCircleMinus} from "react-icons/fa6";
+import { GoPlus } from "react-icons/go";
+import { FiMinus } from "react-icons/fi";
+
+
 const Faq_comp = () => {
 
     const freq_ask_ques=[
@@ -35,21 +38,21 @@ const Faq_comp = () => {
       };
     
   return (
-    <div className="w-[92vw] flex flex-col items-center gap-[32px]">
+    <div className="w-[60vw] xl:w-[100vw] flex flex-col items-center gap-[32px]">
     <div className="w-full flex flex-col gap-[16px]">
     {freq_ask_ques.map((data, index) => (
-      <div key={index} className="">
-        <div className={`flex items-center justify-between p-[20px] rounded-t-[10px] bg-[#E5F1FF] ${faqStates[index] ? ' rounded-b-[0px]'  : 'rounded-b-[10px]'}`}>
-          <p className="font-[500] leading-[22px] font-serif">{data.questions}</p>
+      <div key={index} className={` border-b-[black] border-b-[0.5px] `}>
+        <div className={`flex items-center justify-between p-[20px] rounded-t-[10px]  ${faqStates[index] ? ' rounded-b-[0px] '  : 'rounded-b-[10px] '}`}>
+          <p className="font-[700] leading-[22px] tracking-wider  ">{data.questions}</p>
           <div>
             {faqStates[index] ? (
-              <FaCircleMinus className="h-[38.4px] w-[38.4px] cursor-pointer" onClick={() => faqSetter(index)} />
+              <FiMinus className="h-[38.4px] w-[38.4px] cursor-pointer" onClick={() => faqSetter(index)} />
             ) : (
-              <FaCirclePlus className="h-[38.4px] w-[38.4px] cursor-pointer" onClick={() => faqSetter(index)} />
+              <GoPlus className="h-[38.4px] w-[38.4px] cursor-pointer" onClick={() => faqSetter(index)} />
             )}
           </div>
         </div>
-        <p className={`bg-[#F8FAFC] ${faqStates[index] ? 'block rounded-b-[10px]'  : 'hidden'} px-[20px] py-[10px] text-[16px] font-[300] leading-[24px]`}>
+        <p className={` ${faqStates[index] ? 'block rounded-b-[10px]'  : 'hidden'} px-[20px] py-[10px] text-[16px] font-[300] leading-[24px]`}>
           {data.answers}
         </p>
       </div>

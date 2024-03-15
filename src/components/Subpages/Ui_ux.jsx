@@ -3,6 +3,10 @@ import Herosection from '../common/Herosection'
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import { TypeAnimation } from 'react-type-animation';
+import Faq_comp from '../common/Faq_comp';
+import Form from "../common/Form"
+import { IoCloseSharp } from "react-icons/io5";
+
 const Ui_ux = () => {
 
     const [hovered, setHovered] = useState(false); // State for hover status
@@ -17,13 +21,13 @@ const Ui_ux = () => {
     ]
 
   return (
-    <div className='w-full flex flex-col  items-center justify-center gap-[100px]'>
+    <div className='w-full flex flex-col  items-center justify-center gap-[100px] '>
     {/* <Herosection data={"UI/UX"}/> */}
 
 <div className='bg-[#4E6B8F] ] w-screen flex flex-col items-center justify-center pb-[90px]'>
 
 <div className='h-[80vh] w-[60vw] flex  flex-col items-center justify-center gap-[100px] '>
-    <p className='text-[30px] font-bold flex text-white'>    <TypeAnimation
+    <p className='text-[30px] font-bold flex text-white sm:text-[20px]'>    <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
         'UI/UX design agency,molding ideas into development',
@@ -39,7 +43,7 @@ const Ui_ux = () => {
       ]}
       wrapper="span"
       speed={50}
-      style={{ fontSize: '2em', display: 'inline-block' }}
+      style={{  display: 'inline-block' }}
       repeat={Infinity}
     /> </p>
 
@@ -49,7 +53,7 @@ const Ui_ux = () => {
 
 
 <div 
-      className='self-end flex items-center justify-center gap-[30px] py-[32px] px-[24px] bg-black  text-white text-[40px] cursor-pointer'
+      className='self-end flex items-center justify-center gap-[30px] py-[32px] px-[24px]  bg-black  text-white text-[40px] sm:text-[20px] font-bold cursor-pointer'
       onMouseEnter={() => setHovered(true)} // Set hovered to true on mouse enter
       onMouseLeave={() => setHovered(false)} // Set hovered to false on mouse leave
     >
@@ -59,11 +63,25 @@ const Ui_ux = () => {
       />
     </div>
 
+    <div className='absolute h-[100vw] w-screen  flex items-center justify-center '>
+
+
+
+        <div className='bg-white py-[30px] px-[20px] '>
+        <div className='float-right '><IoCloseSharp className='h-[30px] w-[30px]'/></div>
+    <Form/>
+    </div>
+
+    </div>
+
+
+  
+
 </div>
 
 
 
-<div className='grid grid-cols-3  w-[90vw] gap-[10px] '>
+<div className='grid grid-cols-3  xl:grid-cols-2 md:grid-cols-1  w-[90vw] gap-[10px] '>
 
     {
         
@@ -75,9 +93,13 @@ const Ui_ux = () => {
 
 </div>
 
+<div className='w-11/12 flex flex-col gap-[40px] '>
 
-
-
+<p className='text-4xl font-bold'>Frequently Asked Question</p>
+<div className='w-full flex justify-center'>
+<Faq_comp/>
+</div>
+</div>
 
 
     </div>
