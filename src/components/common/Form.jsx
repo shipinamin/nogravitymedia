@@ -21,10 +21,10 @@ const Form = () => {
         if(isSubmitSuccessful) {
             reset({
                 email:"",
-                firstname:"",
+                name:"",
                 lastname:"",
                 message:"",
-                company:"",
+                subject:"",
                 checkbox:"",
             })
         }
@@ -38,20 +38,20 @@ const Form = () => {
 <form onSubmit={handleSubmit(submitContactForm)}>
 
 <div className='flex flex-col justify-center items-start gap-8'>
-            {/* firstName */}
+            {/* name */}
         <div className='flex flex-col gap-3'>
-                <label htmlFor='firstnam' className='text-[#848E94] font-extralight'>First Name<sup className='text-red-600'>*</sup></label>
+                <label htmlFor='name' className='text-[#848E94] font-extralight'>First Name<sup className='text-red-600'>*</sup></label>
                 <input  
                     type='text'
-                    name='firstname'
-                    id='firstname'
-                    placeholder='Enter first name'
+                    name='name'
+                    id='name'
+                    placeholder='Enter your name'
                     className='text-black  sm:w-[90vw] xl:w-[70vw] w-[500px] outline-none  focus:border-b-3 border-b-[3px] focus:border-[#386685] border-[#C3C8CB] placeholder-gray-500 font-extralight'
 
-                    {...register("firstname", {required:true})}
+                    {...register("name", {required:true})}
                 />
                 {
-                    errors.firstname && (
+                    errors.name && (
                         <span className='text-red-600'>
                             Please enter Your name
                         </span>
@@ -60,7 +60,7 @@ const Form = () => {
             </div>
 
             {/* lastName */}
-        <div className='flex flex-col gap-3' >
+        {/* <div className='flex flex-col gap-3' >
                 <label htmlFor='lastname' className='text-[#848E94] font-extralight'>Last Name</label>
                 <input  
                     type='text'
@@ -72,25 +72,25 @@ const Form = () => {
                     {...register("lastname")}
                 />
                 
-            </div>
+            </div> */}
 
 
 
         {/* compnay name */}
     <div className='flex flex-col gap-3'>
-            <label htmlFor='company' className='text-[#848E94] font-extralight'>Company Name<sup className='text-red-600'>*</sup></label>
+            <label htmlFor='subject' className='text-[#848E94] font-extralight'>subject Name<sup className='text-red-600'>*</sup></label>
             <input 
                 type='text'
-                name='company'
-                id='company'
+                name='subject'
+                id='subject'
                 className='text-black  sm:w-[90vw] xl:w-[70vw] w-[500px] outline-none  focus:border-b-3 border-b-[3px] focus:border-[#386685] border-[#C3C8CB] placeholder-gray-500 font-extralight'
-                placeholder='Company Name'
-                {...register("company", {required:true})}
+                placeholder='subject '
+                {...register("subject", {required:true})}
             />
             {
-                errors.company && (
+                errors.subject && (
                     <span className='text-red-600'>
-                        Please enter your Company Name
+                        Please enter your subject Name
                     </span>
                 )
             }
