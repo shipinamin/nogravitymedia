@@ -1,6 +1,5 @@
 import React ,{useState,useEffect} from 'react'
 import Herosection from '../common/Herosection'
-import { FaArrowRightLong } from "react-icons/fa6";
 import { Carousel, Button } from "antd";
 import { TypeAnimation } from 'react-type-animation';
 import Faq_comp from '../common/Faq_comp';
@@ -8,6 +7,9 @@ import Form from "../common/Form"
 import { IoCloseSharp } from "react-icons/io5";
 import { useRef } from "react";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
+
 const Ui_ux = () => {
 
     const [hovered, setHovered] = useState(false); // State for hover status
@@ -100,8 +102,8 @@ const Ui_ux = () => {
 
 <div className='bg-[#4E6B8F] ] w-screen flex flex-col items-center justify-center pb-[90px]'>
 
-<div className='h-[80vh] w-[60vw] flex  flex-col items-center justify-center gap-[100px] '>
-    <p className='text-[80px] font-bold flex text-white md:text-[50px] sm-se:[30px]'>    <TypeAnimation
+<div className='h-[80vh] w-[60vw]  flex  flex-col items-center justify-center gap-[100px] '>
+    <p className='text-[80px] font-bold flex text-white md:text-[35px] sm-se:[30px] '>    <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
         'UI/UX design agency,molding ideas into development',
@@ -140,9 +142,9 @@ const Ui_ux = () => {
 
 
 
-    <div className={ `h-[120vh] w-screen fixed flex items-center justify-center ${startproject?'flex' : 'hidden'}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+    <div className={ `h-[120vh] w-screen fixed  flex items-center justify-center z-[50] ${startproject?'flex' : 'hidden'}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
 
-        <div className='bg-white py-[30px] px-[20px] min-xl:max-h-[600px] md:max-h-[]  md:w-screen overflow-y-auto rounded-md hide-scrollbar'>
+        <div className='bg-white py-[30px] sm:max-h-[600px] px-[20px] min-xl:max-h-[600px]  md:w-screen overflow-y-auto rounded-md hide-scrollbar'>
         <div className='float-right cursor-pointer '  onClick={() => setstartproject(!startproject)}><IoCloseSharp className='h-[30px] w-[30px]'/></div>
     <Form/>
     </div>
@@ -169,7 +171,7 @@ const Ui_ux = () => {
 </div>
 
 
-<div className='flex xl:flex-col-reverse w-11/12 md:w-11/12 justify-center items-center'>
+<div className='flex xl:flex-col-reverse w-11/12 md:w-11/12 justify-center gap-0 items-center'>
 
 
 <div className="w-[30vw] xl:w-[95vw]  custom-xl-max:w-[92vw] flex flex-col gap-[32px]">
@@ -186,7 +188,7 @@ const Ui_ux = () => {
 
 {design_carsouel_content.map((data, index) => (
               <div className=" " key={index}>
-                <div className=' max-h-[500px] h-[500px] md:h-[300px] bg-center bg-cover flex flex-col justify-center md:items-center gap-5'>
+                <div className='  xl:py-[10px] md:py-0 bg-center bg-cover flex flex-col justify-center xl:items-center gap-5'>
 
 <h1 className='font-bold text-[24px]'>{data.title}</h1>
 <h1 className='text-[24px] text-[grey] font-[300]'>{data.description}</h1>
@@ -200,11 +202,11 @@ const Ui_ux = () => {
 
           </Carousel>
           <div className="flex gap-5 xl:justify-center">
-            <MdKeyboardArrowLeft
+            <FaArrowLeftLong
               onClick={handlePrev}
               className="h-[40px] w-[40px] cursor-pointer"
             />
-            <MdKeyboardArrowRight
+            <FaArrowRightLong
               onClick={handleNext}
               className="h-[40px] w-[40px] cursor-pointer"
             />
@@ -228,7 +230,7 @@ const Ui_ux = () => {
 
 
 
-<div className='w-[100%]  h-[550px]  xl:h-[300px] bg-center bg-cover' style={{backgroundImage:`url(${data})`}}>
+<div className='w-[100%]  h-[550px]  md:h-[300px] bg-center bg-cover' style={{backgroundImage:`url(${data})`}}>
 
 </div>
               </div>
