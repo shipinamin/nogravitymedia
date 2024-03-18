@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-# src/assets/videos/Yardly Final.mp4
+src/assets/videos/Yardly Final.mp4
 # testing
 /coverage
 
