@@ -4,64 +4,83 @@ import bg from '../../assets/pexels-josh-sorenson-1714205.jpg'
 import Button from "../Button"
 const Website_design = () => {
   const data = [
+    
     {
-        title: "Node.js",
-        para: "Node.js is a powerful runtime environment that allows us to build scalable and efficient server-side applications. With its non-blocking, event-driven architecture, we can handle concurrent connections and high traffic loads effectively, ensuring optimal performance and responsiveness for your applications."
-    },
+img:'https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png',
+title:'Node js'
+  },
     {
-        title: "React.js and React Native",
-        para: "React.js and React Native are industry-leading JavaScript libraries for building interactive user interfaces and mobile applications. By utilizing component-based architecture and virtual DOM, we can create reusable UI components and deliver seamless experiences across web and mobile platforms. Whether it's a web application or a native mobile app, we leverage React.js and React Native to provide engaging and intuitive user experiences."
-    },
+img:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/539px-React-icon.svg.png',
+title:'React Js'
+  },
     {
-        title: "Angular",
-        para: "Angular is a comprehensive JavaScript framework for building dynamic and feature-rich web applications. With its powerful data binding, dependency injection, and modular structure, we can develop scalable and maintainable front-end solutions tailored to your specific business needs. From single-page applications to enterprise-grade systems, we harness the full potential of Angular to deliver robust and user-friendly applications."
-    },
+img:'https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg',
+title:'Angular js'
+  },
     {
-        title: "Vue.js",
-        para: "Vue.js is a progressive JavaScript framework for building modern web applications. Its simplicity, flexibility, and performance make it an ideal choice for rapid prototyping and developing scalable UI components. With Vue.js, we can create responsive and interactive applications that offer a smooth and enjoyable user experience. Whether you need a simple website or a complex SPA, Vue.js empowers us to bring your ideas to life with ease."
-    },
+img:'https://www.positivethinking.tech/wp-content/uploads/2021/01/Logo-Vuejs.png',
+title:'Vue Js'
+  },
     {
-        title: "Typescript",
-        para: "Typescript is a statically typed superset of JavaScript that enhances code maintainability, readability, and scalability. By adding static types, interfaces, and advanced features to JavaScript, we can catch errors early in the development process and write more robust and reliable code. With Typescript, we ensure code quality and consistency, enabling seamless collaboration and reducing bugs in your projects."
-    },
+img:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png',
+title:'Type Script'
+  },
     {
-        title: "JavaScript",
-        para: "JavaScript is the backbone of modern web development, powering dynamic and interactive websites and applications. With its versatility and extensive ecosystem of libraries and frameworks, we can create customized solutions tailored to your unique requirements. From front-end development to server-side scripting, we leverage the full potential of JavaScript to deliver innovative and engaging digital experiences for your users."
-    },
+img:'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+title:'javascript'
+  },
     {
-        title: "PHP",
-        para: "PHP is a popular server-side scripting language that enables us to create dynamic and database-driven websites and web applications. With its simplicity, flexibility, and extensive library support, we can develop robust back-end solutions tailored to your business needs. Whether you need an e-commerce platform, a content management system, or a custom web application, PHP empowers us to deliver scalable and reliable solutions that drive your online presence forward."
-    },
+img:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png',
+title:'php'
+  },
     {
-        title: "Python",
-        para: "Python is a versatile and powerful programming language known for its simplicity, readability, and vast ecosystem of libraries and frameworks. With its elegant syntax and rich set of features, we can build anything from web applications to data analysis tools with ease. Whether you need a web scraper, a machine learning model, or a backend API, Python enables us to develop efficient and maintainable solutions that meet your business objectives."
-    },
+img:'data:image/png;base64,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',
+title:'python'
+  },
     {
-        title: "Java",
-        para: "Java is a widely-used programming language renowned for its portability, performance, and scalability. With its robust ecosystem of tools and libraries, we can develop enterprise-grade applications for a variety of platforms, including web, mobile, and desktop. Whether you need a scalable backend service, an Android app, or a desktop application, Java empowers us to deliver reliable and secure solutions that meet the demands of modern businesses."
-    },
+img:'https://logowik.com/content/uploads/images/731_java.jpg',
+title:'java'
+  },
     {
-        title: "Flutter",
-        para: "Flutter is a cross-platform UI toolkit developed by Google for building natively compiled applications for mobile, web, and desktop from a single codebase. With its fast development cycle, expressive UI, and native performance, we can create beautiful and responsive applications that run seamlessly on iOS, Android, and the web. Whether you need a mobile app, a web app, or a desktop application, Flutter enables us to deliver high-quality experiences across multiple platforms."
-    },
+img:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAAD4CAMAAACXF/l7AAAAtFBMVEX///9nt/dCpfUNR6Fhtffn8/5bs/eo1Prb4+8ANpvN5vwARKDr9f6Mx/kwn/QKRqEUSJkVSJZKqPUXRpBwu/gQSJ/v9/7J5PwXRIkAQJ+TyvkUSJfi6PIXQH8/jtDQ5/wWPXkCGTy6xuAUOHAAMZoUM2QAPJ5JmN0QLl0WN2oMJ1AACiwIIUan0/qIwvje7v0UOXgALnkAP48QLFcPNG4NO4MHHT8JJ1YFKF0AEWcAKYUAJpcmVNy+AAAEvklEQVR4nO3ciXrSQBQFYDbpgi1RTMG2ppbF0E2RzVrf/73MKiQEMpOZhDPXe17A7//OPUy3z1qNw+FwOBwOh8Op1a7eacixEVHu2hoCgrlr15XTYov2sIWw5f2xFWG4F7aUHd4L4V7Yoj28F7KWVp2OBWYv54RujC1JCiFLvc570R62kLXAvJVsSWHoWFqtq2MrwvCNkbXwXkoIpRvrs4WqBWb7OnpB2T7fGFkL76WE8I2xpezwXuhaCN1YnZKF0FtZp7QXQr3AbJ/Sz2F4+0kKJQvKXijdGG8/ZSH0VlLaC4qF90LWwm9lCaF0Y5T+3pLS5xil31dq+Vs4EAvvhawF5q2ktH3eC1vKDqW98FuZDKEbg/k5DL+VqYBYeC9sKTv8VmL2wttPWQi9lZT2gmLhvSQppPZCyULoxihZKO2FkoXSjaFYdPw/JP/ZW3nycqKal34VFoG38rrdUk37ohJL/o1dq/8zlCytSiwCezHGIrQXUyyEbgzFUtHfXFVi0YCB2X5N/cxgtq9BA7MXDRo0i4oGaS+qGqy9qGnwbqy4BtVSRIO4lziy3zYjW2S7wdx+MQ3uXuQ1+BZxDfZe5DQ4X/Ora0y4MXGNKRYBjciNtTAsea+nyPYvLj9+wrAc7kZkLxeXjYaiRpvlkEbUoqjRaDmgEdhLaFHSaLXs3Y3QXhoNRY1mS3Y34jempNFuydLIWgpqSrBkaCT2oqApxbKjKWApoCnJkvwUEHsr0xZpTWmW7W7k91JIU6JlW1PUIqUp1fJPU2gv0pqSLdFuCu5FUlO6xe+m+F6kNBVYPI3SjQlrKrGIJM8ioDHIkqsxypKjMcxyUGOc5YDGQMteDYzlu4RljwbGItPLHk3+349VFFlLhgbGIndjmRqjLSkNjEX+xnY0xlu2NDCWYjeW0JCwRBoilkBDxuJp6tfHRkT5oWxpNNzTYyvi3Clr3NnP22Mr4qhq3NlsQEXjLmdfBr05iUtzR1+/DAa9DzYBTWgZ9G6sjvGX5lnCYm4s+7PhGncUHZmHQdKcF9C4D54lxFgexu4arPEtQTFRM3YTZzeyGncyioqJm7E7OJcmtxt3GhWzacar5huMRqYb3xIXs8E0OziX1hfWuNNJtP4QY0UYEzWBJXwvk814GpzdiF2as5g+xItJNWOcxnmMislqBkqTf2mBJSgmG2PSbpzHRVxM5pmZ1I3zvClmTzNNU94b5z4uZhfT3MSIbnzLYrKLsbYlhuzGuX/2i/G+KtvG7FJM0PiW6Mo2mBu72d21QF1a1m6cp2e/mG1Mz+5mSuA1zlNUTIwZWN39FOxL8yxrr5hoMqOB1TwoCTQ433smNYElvLLJZDZvZg/FjG58y9q/ssV0ucrvBHo3ocVr5nUlVAmiJu4msKzXv1Z2V84CeGmB5XEpOBRsjW9ZruyMZ15Mg3Np55fO0+sq8TWxwZr+7/l8bilYfA3M7wiGb4oWqN0M3xQtUJc2PFO0QH3vORyra4C6GRd4YVKaDs6ngAYNrW6QdsOapAbo9TzT8ClAqxtSGmK7wdHo2A3OpwCtzzTeTVpDqhugS9PwKQCk4d2kNbS6wdHwbnC7GZ+pZvwHRnN7qiHHRnA4HA6Hw+FwsvMXDX7ldQ7FwwoAAAAASUVORK5CYII=',
+title:'flutter'
+  },
     {
-        title: "Kotlin",
-        para: "Kotlin is a modern programming language that offers interoperability with Java and seamless integration with Android Studio. With its concise syntax, null safety, and extensive tooling support, we can develop Android applications with ease and efficiency. Whether you need a new Android app or want to migrate your existing Java codebase to Kotlin, we leverage the power of Kotlin to deliver robust and maintainable solutions that enhance your mobile presence."
-    },
+img:'https://cms-assets.tutsplus.com/uploads/users/362/posts/29304/preview_image/picKotlin.jpg',
+title:'kotlin'
+  },
     {
-        title: "Wordpress",
-        para: "WordPress is a versatile content management system (CMS) that powers millions of websites and blogs worldwide. With its user-friendly interface, customizable themes, and extensive plugin ecosystem, we can create beautiful and functional websites tailored to your brand and audience. Whether you need a simple blog, an e-commerce site, or a corporate website, WordPress empowers us to build scalable and feature-rich solutions that meet your business goals."
-    },
+img:'https://upload.wikimedia.org/wikipedia/commons/9/93/Wordpress_Blue_logo.png',
+title:'wordpress'
+  },
     {
-        title: "Shopify",
-        para: "Shopify is a leading e-commerce platform that enables businesses to create and manage online stores with ease. With its intuitive interface, customizable themes, and powerful features, we can build a professional online storefront that drives sales and enhances your brand visibility"
-    }
+img:'https://avatars.githubusercontent.com/u/8085?s=280&v=4',
+title:'shopify'
+  },
+    {
+img:'https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png',
+title:'AWS'
+  },
+    {
+img:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/WooCommerce_logo.svg/1200px-WooCommerce_logo.svg.png',
+title:'woocommerce'
+  },
+    {
+img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOv-8ULHwGd9aXOXRrXCBPOnMAs75k87LN_s9oSfWJe_cVwoTGizwRS3s2miesfR2jEiY&usqp=CAU',
+title:'.NET'
+  },
+    {
+img:'https://developer.apple.com/swift/images/swift-og.png',
+title:'swift'
+  },
+
+
   ]
   return (
     <div className='w-full flex flex-col items-center justify-center '>
     {/* <Herosection data={"Web Development"}/> */}
+    <div className='w-screen h-[100vh] bg-center bg-cover min-xl:pl-[100px] flex items-center' style={{backgroundImage: `linear-gradient(rgba(0, 10, 1, 1), transparent), url(${bg})`}}>
 
-    <div className='w-screen h-[90vh] bg-center bg-cover min-xl:pl-[100px] flex items-center' style={{backgroundImage:`url(${bg})`,  backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
 
 <div className='min-xl:w-[50vw] text-white flex flex-col gap-5 xl:px-[30px]'>
 
@@ -92,16 +111,23 @@ development services</p>
 
 <div className='w-full  flex flex-col items-center justify-center'>
 
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 p- pb-14 '>
+<div className='w-[70%] xl:w-10/12 flex justify-center items-center  flex-col gap-10 p- pb-14 '>
 <h1 className='font-bold text-4xl'> Our tech Stack</h1>
 
-<div className='flex items-cente gap-4 flex-col'>
+<div className='grid w-full grid-cols-3 items-cente gap-10 sm:grid-cols-2 '>
 {
   data.map((data,index)=>(
 
 
 <div key={index}>
-<p className='min-xl:text-2xl min-xl:leading-9 tracking-wider font-light'><span className='font-bold text:xl '>{data.title} : </span> {data.para}</p>
+    <div  className='flex flex-col items-center justify-center'>
+
+    <img src={data.img} alt="" class='h-[100px]  ' loading='lazy'/>
+
+
+<p className='capitalize'>{data.title}</p>
+</div>
+
 </div>
   ))}
 

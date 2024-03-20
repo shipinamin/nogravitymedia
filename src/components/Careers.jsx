@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Herosection from "./common/Herosection";
-import Form from "../components/common/Form";
+import Form from "./common/Form";
 import {
   CDropdown,
   CDropdownToggle,
   CDropdownMenu,
   CDropdownItem,
 } from "@coreui/react";
-import Button_arr from "../components/core/Career/Button";
+import Button_arr from "./core/Career/Button";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
 import { useEffect } from "react";

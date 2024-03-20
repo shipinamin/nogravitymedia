@@ -1,15 +1,15 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../Button'
 import { useEffect ,useState} from 'react';
-import Togglebtn from './Togglebtn';
+import Togglebtn from '../Togglebtn';
 import { Link, NavLink } from 'react-router-dom';
 import './navbar.css'
-import Megamenubtn from './Subpages/Megamenubtn';
-
+import Megamenubtn from '../Subpages/Megamenubtn';
+import Modal from './Modal'
 const Navbar = () => {
 
     const [isContentVisible, setIsContentVisible] = useState(false);
-
+    const [startproject, setstartproject] = useState(false); 
     function toggleContentVisibility () {
     setIsContentVisible(!isContentVisible);
 };
@@ -64,7 +64,9 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "
 
 
   return (
+
   <div className={`${shahdow}  w-full flex items-center justify-between   xl:flex-col  fixed xl:px-[20px] px-[40px] py-[30px] xl:py-[15px] z-30 `}  style={{ backgroundColor: bgColor,transition: 'background-color 200ms ease-in-out'}}>
+<Modal startproject={startproject} setstartproject={setstartproject}/>
 
  <div className='flex justify-between  xl:w-screen items-center xl:px-[25px] '>
  <Link to='/'>
@@ -87,7 +89,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "
     {data.map((data, index) => (
         <ul key={index} className='flex flex-col gap-5 font-bold  xl:text-l uppercase xl:relative  ' style={{color:Color}}>
             {data === "Business Enquiries" ? (
-                <li className=' xl:py-2 xl:px-10'><Button data={data} width={'230px'} /></li>) : ( <NavLink to={`/${data}`}>
+                <li className=' xl:py-2 xl:px-10'        onClick={() => setstartproject(!startproject)}><Button data={data} width={'230px'} /></li>) : ( <NavLink to={`/${data}`}>
 
 {data== "Services" ?(
   
@@ -142,8 +144,11 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "
  
 
 </div>
+
+
         
     </div>
+
   )
 }
 

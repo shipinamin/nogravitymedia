@@ -9,6 +9,7 @@ import { useRef } from "react";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Modal from '../../components/common/Modal'
 
 const Ui_ux = () => {
 
@@ -100,9 +101,9 @@ const Ui_ux = () => {
     <div className='w-full flex flex-col  items-center justify-center gap-[100px] '>
     {/* <Herosection data={"UI/UX"}/> */}
 
-<div className='bg-[#4E6B8F] ] w-screen flex flex-col items-center justify-center pb-[90px]'>
+<div className='bg-[#141313]   w-screen flex flex-col items-center justify-center pb-[90px] min-xl:pt-[200px]'>
 
-<div className='h-[80vh] w-[60vw]  flex  flex-col items-center justify-center gap-[100px] '>
+<div className='xl:h-[80vh] w-[60vw]  flex  flex-col items-center justify-center gap-[100px] '>
     <p className='text-[80px] font-bold flex text-white md:text-[35px] sm-se:[30px] '>    <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
@@ -129,7 +130,7 @@ const Ui_ux = () => {
 
 
 <div 
-      className='self-end flex items-center justify-center gap-[30px] py-[32px] px-[24px]  bg-black  text-white text-[40px] sm:text-[20px] font-bold cursor-pointer'
+      className='self-end flex items-center justify-center gap-[30px] py-[32px] px-[24px]  bg-white  text-black text-[40px] sm:text-[20px] font-bold cursor-pointer'
       onMouseEnter={() => setHovered(true)} // Set hovered to true on mouse enter
       onMouseLeave={() => setHovered(false)} // Set hovered to false on mouse leave
       onClick={() => setstartproject(!startproject)}
@@ -141,7 +142,7 @@ const Ui_ux = () => {
     </div>
 
 
-
+{/* 
     <div className={ `h-[120vh] w-screen fixed  flex items-center justify-center z-[50] ${startproject?'flex' : 'hidden'}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
 
         <div className='bg-white py-[30px] sm:max-h-[600px] px-[20px] min-xl:max-h-[600px]  md:w-screen overflow-y-auto rounded-md hide-scrollbar'>
@@ -149,7 +150,9 @@ const Ui_ux = () => {
     <Form/>
     </div>
 
-    </div>
+    </div> */}
+
+    <Modal startproject={startproject} setstartproject={setstartproject}/>
 
 
   
