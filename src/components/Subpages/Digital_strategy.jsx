@@ -1,155 +1,266 @@
-import React from 'react'
-import Button from '../Button'
-import { useEffect ,useState} from 'react';
-import Togglebtn from '../Togglebtn';
-import { Link, NavLink } from 'react-router-dom';
-import './navbar.css'
-import Megamenubtn from '../Subpages/Megamenubtn';
-import Modal from './Modal'
-const Navbar = () => {
+import React ,{useState,useEffect} from 'react'
+import Herosection from '../common/Herosection'
+import { Carousel, Button } from "antd";
+import { TypeAnimation } from 'react-type-animation';
+import Faq_comp from '../common/Faq_comp';
+import Form from "../common/Form"
+import { IoCloseSharp } from "react-icons/io5";
+import { useRef } from "react";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Modal from '../../components/common/Modal'
+import "./ui_ux.css"
+const Ui_ux = () => {
 
-    const [isContentVisible, setIsContentVisible] = useState(false);
-    const [startproject, setstartproject] = useState(false); 
-    function toggleContentVisibility () {
-    setIsContentVisible(!isContentVisible);
-};
-
-
-    const [bgColor, setBgColor] = useState('transparent');
-    const [Color, setColor] = useState('white');
-    const [shahdow, setshahdow] = useState('none');
-    const [border, setborder] = useState('cool-link');
-    const services_mega_menu = [
-      "UI/UX",
-"Digital Strategy and Planning",
-
- "Social Media Marketing ",
- "Website Design and Development",
- "Search Engine Optimization",
-"CUSTOM CRM",
- "Shopify Website & Development",
- "POS",
-]
-
-    
+    const [hovered, setHovered] = useState(false); // State for hover status
+    const [startproject, setstartproject] = useState(false); // State for hover status
     useEffect(() => {
-      function handleScroll() {
-        const scrollPosition = window.scrollY;
-        const halfViewportHeight =  window.innerHeight * 0.1;
-  
-        if (scrollPosition > halfViewportHeight) {
-          setBgColor('white');
-          setColor('black');
-          setshahdow('shadow-md');
-          setborder('cool-link')
-        } else {
-          setBgColor('transparent');
-          setColor('white');
-          setshahdow('none');
-          setborder('coolw-link ')
-        }
-      }
-  
-      window.addEventListener('scroll', handleScroll);
-      
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
+      // Function to handle body scroll
+      const handleBodyScroll = () => {
+          // Disable body scroll when startproject is true
+          if (startproject) {
+              document.body.style.overflow = 'hidden';
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+              document.body.style.overflow = 'auto';
+          }
       };
-    }, []);
+
+      // Add event listener for scroll when startproject changes
+      handleBodyScroll();
+      return () => {
+          document.body.style.overflow = 'auto'; // Reset overflow when component unmounts
+      };
+  }, [startproject]);
+
+    const gallery_data=[
+"https://media.contra.com/image/upload/ec47oc4qprgpddv7gm9w",
+"https://assets.materialup.com/uploads/74f2f6ce-e116-4505-89d6-52c7b4776f58/attachment.jpg",
+"https://i.pinimg.com/originals/c6/ba/98/c6ba986232e5a1974633ec9d3809c0a7.png",
+"https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149051555.jpg",
+"https://futureskillsprime.in//sites/default/files/2021-04/web-development.jpg",
+"https://i.pinimg.com/originals/dc/74/1e/dc741e83cbf54fb19cfbf7eac5ba47e3.png"
+    ]
+
+    const design_carsouel =[
+      "https://cdn.dribbble.com/users/795597/screenshots/5885477/ui-ux_design8.gif",
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/09804a82963291.5d308c3850e2c.gif",
+      "https://i.pinimg.com/originals/1b/d0/82/1bd082c378bbe411a4fe455b5625b25c.gif",
+      "https://appinventiv.com/wp-content/uploads/2019/02/Animation-Top-UIUX-Trends-2020-1.gif"
 
 
-    
-const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "Business Enquiries"]
 
+    ]
+  
+    const design_carsouel_content =[
+     {
+      title:"Attendance Dashboard Report",
+      description:"Interaction Design - Prototype",
+      para:"Created an interaction prototype for a machine learning driven scan and search interface for eCommerce App Builder."
+     },
+     {
+      title:"Attendance Dashboard Report",
+      description:"Interaction Design - Prototype",
+      para:"Created an interaction prototype for a machine learning driven scan and search interface for eCommerce App Builder."
+     },
+     {
+      title:"Attendance Dashboard Report",
+      description:"Interaction Design - Prototype",
+      para:"Created an interaction prototype for a machine learning driven scan and search interface for eCommerce App Builder."
+     },
+     {
+      title:"Attendance Dashboard Report",
+      description:"Interaction Design - Prototype",
+      para:"Created an interaction prototype for a machine learning driven scan and search interface for eCommerce App Builder."
+     },
+
+
+
+    ]
+  
+    const carouselRef1 = useRef(null);
+    const carouselRef2 = useRef(null);
+
+    const handleNext = () => {
+        if (carouselRef1.current && carouselRef2.current) {
+            carouselRef1.current.next();
+            carouselRef2.current.next();
+        }
+    };
+
+    const handlePrev = () => {
+        if (carouselRef1.current && carouselRef2.current) {
+            carouselRef1.current.prev();
+            carouselRef2.current.prev();
+        }
+    };
 
 
   return (
+    <div className='w-full flex flex-col  items-center justify-center gap-[100px] '>
+    {/* <Herosection data={"UI/UX"}/> */}
 
-  <div className={`${shahdow}  w-full flex items-center justify-between   xl:flex-col  fixed xl:px-[20px] px-[40px] py-[30px] xl:py-[15px] z-30 `}  style={{ backgroundColor: bgColor,transition: 'background-color 200ms ease-in-out'}}>
-<Modal startproject={startproject} setstartproject={setstartproject}/>
+<div className='bg-[#141313] min-xl:h-[100vh]  w-screen flex flex-col items-center justify-center pb-[90px] min-xl:pt-[200px]'>
 
- <div className='flex justify-between  xl:w-screen items-center xl:px-[25px] '>
- <Link to='/'>
+<div className='xl:h-[80vh] w-[60vw]  flex  flex-col items-center justify-center gap-[100px] '>
+    <p className='text-white text-[80px] font-bold flex text- md:text-[35px] sm-se:[30px] '>    <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+           'UI/UX design agency,molding ideas into products',
+           2000, 
+           // wait 1s before replacing "Mice" with "Hamsters"
+        'UI/UX design agency,molding ideas into prototypes',
+        2000,
+        'UI/UX design agency,molding ideas into brands',
+        2000,
+        'UI/UX design agency,molding ideas into design',
+        2000,
 
- <div className='flex items-center gap-2'>
- <img src="https://media.licdn.com/dms/image/C4D0BAQEV5S_Yk72tUw/company-logo_200_200/0/1677983924847?e=1717027200&v=beta&t=ZCWd84VFRLudA1IRr0oroLh0FlMaJsYz0Pf4Wt3ob30" alt="" className='h-[60px] sm:h-[40px]' />            
+    'UI/UX design agency,molding ideas into products',
+        2000   
 
-<p className='font-extrabold text-xl' style={{color:Color}}>NoGravityMedia</p>
+      ]}
+      wrapper="span"
+      speed={50}
+      style={{  display: 'inline-block' }}
+      repeat={Infinity}
+    /> </p>
+
+
+
 </div>
-</Link>
- <Togglebtn navtoggle={toggleContentVisibility} navbg={setBgColor}  textcolor={setColor}/>
- {/* <Link to={`/Digital Strategy and Planning`}>
-<div>hellp</div>
-</Link> */}
- </div>
 
 
-
- <div className={`${isContentVisible ? 'xl:flex' : 'xl:hidden'} flex items-center xl:items-start xl:px-[px]  flex-row xl:flex-col gap-10 xl:gap-0 py- xl:bg-transparent xl:bg-white xl:w-screen xl:h-screen xl:absolute md:top-[76px]  xl:top-[90px] xl:pb-[200px]  overflow-auto`}>
-    {data.map((data, index) => (
-        <ul key={index} className='flex flex-col gap-5 font-bold  xl:text-l uppercase xl:relative  ' style={{color:Color}}>
-            {data === "Business Enquiries" ? (
-                <li className=' xl:py-2 xl:px-10'        onClick={() => setstartproject(!startproject)}><Button data={data} width={'230px'} /></li>) : ( <NavLink to={`/${data}`}>
-
-{data== "Services" ?(
-  
-  <div class=" group">
-    {/* <button class="hover:text-gray-900">Hover me</button> */}{
-
-
-    <div className='flex items-center justify-between  xl:border-t-2  xl:py-2 xl:px-10 xl:w-screen '>
-
-{/* <NavLink to={`/${data}`}> */}
-
-    <div className={`tracking-tight xl:text-black cursor-pointer ${border}`}>{data}</div>
-      {/* <p className='min-xl:hidden'>{'>'}</p> */}
-      <p className='min-xl:hidden'><Megamenubtn/></p>
+<div 
+      className='self-end flex items-center justify-center gap-[30px] py-[32px] px-[24px]  bg-white  text-black text-[40px] sm:text-[20px] font-bold cursor-pointer'
+      onMouseEnter={() => setHovered(true)} // Set hovered to true on mouse enter
+      onMouseLeave={() => setHovered(false)} // Set hovered to false on mouse leave
+      onClick={() => setstartproject(!startproject)}
+    >
+      Start a Project 
+      <FaArrowRightLong 
+        className={`font-[600] ${hovered ? 'translate-x-2 transition-all duration-300 ease-in-out' : ''}`} // Conditionally apply translate and transition classes
+      />
     </div>
+
+
+{/* 
+    <div className={ `h-[120vh] w-screen fixed  flex items-center justify-center z-[50] ${startproject?'flex' : 'hidden'}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+
+        <div className='bg-white py-[30px] sm:max-h-[600px] px-[20px] min-xl:max-h-[600px]  md:w-screen overflow-y-auto rounded-md hide-scrollbar'>
+        <div className='float-right cursor-pointer '  onClick={() => setstartproject(!startproject)}><IoCloseSharp className='h-[30px] w-[30px]'/></div>
+    <Form/>
+    </div>
+
+    </div> */}
+
+    <Modal startproject={startproject} setstartproject={setstartproject}/>
+
+
+  
+
+</div>
+
+
+
+<div className='grid grid-cols-3  xl:grid-cols-2 md:grid-cols-1  w-[90vw] gap-[10px] '>
+
+    {
+        
+        gallery_data.map((data,index)=>(
+
+<div className='bg-center bg-cover h-[364px]' style={{backgroundImage: `url(${data})`}} key={index}></div>
+        ))
     }
 
-    <div class="absolute xl:relative hidden bg-white min-xl:shadow-lg p-4 top-[64px] xl:top-[0px]  mt-2 group-hover:block text-black border border-gray-300">
-    
-    
-    <div key={index} className='flex flex-col gap-5 '> 
-    {
-  services_mega_menu.map((data, index) => (
-      <ul className='flex flex-'>
-       <Link to={`/${data}`}>
-        <li className='coolM-link hover:text-[#F096B8] font-[500]  '>{data}</li>
-        </Link>
-        
-      </ul>
-  ))
-}
-</div>
-
-   
-
-    </div>
-</div>):
-  (
-    <li className={`tracking-tight xl:text-black cursor-pointer xl:border-t-2  xl:py-2 xl:px-10 xl:w-screen   ${border} `}>{data}</li>
-  )
-  
-}
-              </NavLink>
-
-
-
-               
-            )
-            }
-        </ul>
-    ))}
- 
-
 </div>
 
 
-        
-    </div>
+<div className='flex xl:flex-col-reverse w-11/12 md:w-11/12 justify-center gap-0 items-center'>
 
+
+<div className="w-[30vw] xl:w-[95vw]  custom-xl-max:w-[92vw] flex flex-col gap-[32px]">
+        <div className="flex flex-col ">
+          <Carousel
+            className="pb-[54px] carousel_categories"
+            ref={carouselRef1}
+            slidesToShow={1}
+            autoplay
+            autoplaySpeed={3000}
+         
+          >
+          
+
+{design_carsouel_content.map((data, index) => (
+              <div className=" " key={index}>
+                <div className='  xl:py-[10px] md:py-0 bg-center bg-cover flex flex-col justify-center xl:items-center gap-5'>
+
+<h1 className='font-bold text-[24px]'>{data.title}</h1>
+<h1 className='text-[24px] text-[grey] font-[300]'>{data.description}</h1>
+<h1 className='text-[18px] xl:text-center'>{data.para}</h1>
+</div>
+
+              </div>
+            ))}
+
+
+
+          </Carousel>
+          <div className="flex gap-5 xl:justify-center">
+            <FaArrowLeftLong
+              onClick={handlePrev}
+              className="h-[40px] w-[40px] cursor-pointer"
+            />
+            <FaArrowRightLong
+              onClick={handleNext}
+              className="h-[40px] w-[40px] cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+<div className="w-[60vw] xl:w-[95vw]  custom-xl-max:w-[92vw] flex flex-col gap-[32px]">
+        <div className="flex flex-col">
+          <Carousel
+            className="pb-[54px] carousel_categories"
+            ref={carouselRef2}
+            slidesToShow={1}
+            autoplay
+            autoplaySpeed={3000}
+         
+          >
+            {design_carsouel.map((data, index) => (
+              <div className="" key={index}>
+
+
+
+
+
+<div className='w-[100%]  h-[550px]  md:h-[300px] bg-center bg-cover' style={{backgroundImage:`url(${data})`}}>
+
+</div>
+              </div>
+            ))}
+          </Carousel>
+      
+        </div>
+      </div>
+
+      
+      </div>
+
+
+<div className='w-11/12 flex flex-col gap-[40px] pb-[100px]'>
+
+<p className='text-4xl font-bold'>Frequently Asked Question</p>
+<div className='w-full flex justify-center'>
+<Faq_comp/>
+</div>
+</div>
+
+
+    </div>
   )
 }
 
-export default Navbar
+export default Ui_ux
