@@ -1,0 +1,6 @@
+.para_auto_write {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#ffffff, #F29DBC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

@@ -10,7 +10,7 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Modal from '../../components/common/Modal'
-
+import "./ui_ux.css"
 const Ui_ux = () => {
 
     const [hovered, setHovered] = useState(false); // State for hover status
@@ -101,22 +101,25 @@ const Ui_ux = () => {
     <div className='w-full flex flex-col  items-center justify-center gap-[100px] '>
     {/* <Herosection data={"UI/UX"}/> */}
 
-<div className='bg-[#141313]   w-screen flex flex-col items-center justify-center pb-[90px] min-xl:pt-[200px]'>
+<div className='bg-[#141313] min-xl:h-[100vh]  w-screen flex flex-col items-center justify-center pb-[90px] min-xl:pt-[200px]'>
 
 <div className='xl:h-[80vh] w-[60vw]  flex  flex-col items-center justify-center gap-[100px] '>
-    <p className='text-[80px] font-bold flex text-white md:text-[35px] sm-se:[30px] '>    <TypeAnimation
+    <p className='text-white text-[80px] font-bold flex text- md:text-[35px] sm-se:[30px] '>    <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'UI/UX design agency,molding ideas into development',
-        2000, // wait 1s before replacing "Mice" with "Hamsters"
+           'UI/UX design agency,molding ideas into products',
+           2000, 
+           // wait 1s before replacing "Mice" with "Hamsters"
         'UI/UX design agency,molding ideas into prototypes',
         2000,
         'UI/UX design agency,molding ideas into brands',
         2000,
         'UI/UX design agency,molding ideas into design',
         2000,
-        'UI/UX design agency,molding ideas into products',
-        2000
+
+    'UI/UX design agency,molding ideas into products',
+        2000   
+
       ]}
       wrapper="span"
       speed={50}
