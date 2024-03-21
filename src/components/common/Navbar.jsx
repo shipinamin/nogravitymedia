@@ -22,14 +22,14 @@ const Navbar = () => {
     const services_mega_menu = [
       "UI/UX",
 "Digital Strategy and Planning",
-"Creative Strategy and Web Graphics Design",
+
  "Social Media Marketing ",
  "Website Design and Development",
  "Search Engine Optimization",
- "Web Analytics",
+"CUSTOM CRM",
  "Shopify Website & Development",
  "POS",
- "LMS"]
+]
 
     
     useEffect(() => {
