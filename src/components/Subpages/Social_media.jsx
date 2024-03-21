@@ -1,120 +1,266 @@
-import React from 'react'
+import React ,{useState,useEffect} from 'react'
 import Herosection from '../common/Herosection'
-const Social_media = () => {
-    const data = [
-        {
-          title:"Expertise:",
-          para:"With years of experience in the industry, our team brings a wealth of knowledge and expertise to every project we undertake.",
-        },
-        {
-          title:"Innovation:",
-          para:"We stay at the forefront of technology trends, constantly exploring new possibilities and pushing the boundaries of what's possible.",
-        },
-        {
-          title:"Customer-Centric Approach:",
-          para:"Your satisfaction is our top priority. We work closely with you to understand your unique needs and tailor our solutions accordingly.",
-        },
-        {
-          title:"Reliability:",
-          para:"When you choose No Gravity Media, you can trust that your project is in capable hands. We pride ourselves on delivering reliable, high-quality solutions, on time and within budget",
-        },
-      ]
+import { Carousel, Button } from "antd";
+import { TypeAnimation } from 'react-type-animation';
+import Faq_comp from '../common/Faq_comp';
+import Form from "../common/Form"
+import { IoCloseSharp } from "react-icons/io5";
+import { useRef } from "react";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Modal from '../../components/common/Modal'
+import "./ui_ux.css"
+const Ui_ux = () => {
+
+    const [hovered, setHovered] = useState(false); // State for hover status
+    const [startproject, setstartproject] = useState(false); // State for hover status
+    useEffect(() => {
+      // Function to handle body scroll
+      const handleBodyScroll = () => {
+          // Disable body scroll when startproject is true
+          if (startproject) {
+              document.body.style.overflow = 'hidden';
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+              document.body.style.overflow = 'auto';
+          }
+      };
+
+      // Add event listener for scroll when startproject changes
+      handleBodyScroll();
+      return () => {
+          document.body.style.overflow = 'auto'; // Reset overflow when component unmounts
+      };
+  }, [startproject]);
+
+    const gallery_data=[
+"https://media.contra.com/image/upload/ec47oc4qprgpddv7gm9w",
+"https://assets.materialup.com/uploads/74f2f6ce-e116-4505-89d6-52c7b4776f58/attachment.jpg",
+"https://i.pinimg.com/originals/c6/ba/98/c6ba986232e5a1974633ec9d3809c0a7.png",
+"https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149051555.jpg",
+"https://futureskillsprime.in//sites/default/files/2021-04/web-development.jpg",
+"https://i.pinimg.com/originals/dc/74/1e/dc741e83cbf54fb19cfbf7eac5ba47e3.png"
+    ]
+
+    const design_carsouel =[
+      "https://cdn.dribbble.com/users/795597/screenshots/5885477/ui-ux_design8.gif",
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/09804a82963291.5d308c3850e2c.gif",
+      "https://i.pinimg.com/originals/1b/d0/82/1bd082c378bbe411a4fe455b5625b25c.gif",
+      "https://appinventiv.com/wp-content/uploads/2019/02/Animation-Top-UIUX-Trends-2020-1.gif"
+
+
+
+    ]
+  
+    const design_carsouel_content =[
+     {
+      title:"Attendance Dashboard Report",
+      description:"Interaction Design - Prototype",
+      para:"Created an interaction prototype for a machine learning driven scan and search interface for eCommerce App Builder."
+     },
+     {
+      title:"Attendance Dashboard Report",
+      description:"Interaction Design - Prototype",
+      para:"Created an interaction prototype for a machine learning driven scan and search interface for eCommerce App Builder."
+     },
+     {
+      title:"Attendance Dashboard Report",
+      description:"Interaction Design - Prototype",
+      para:"Created an interaction prototype for a machine learning driven scan and search interface for eCommerce App Builder."
+     },
+     {
+      title:"Attendance Dashboard Report",
+      description:"Interaction Design - Prototype",
+      para:"Created an interaction prototype for a machine learning driven scan and search interface for eCommerce App Builder."
+     },
+
+
+
+    ]
+  
+    const carouselRef1 = useRef(null);
+    const carouselRef2 = useRef(null);
+
+    const handleNext = () => {
+        if (carouselRef1.current && carouselRef2.current) {
+            carouselRef1.current.next();
+            carouselRef2.current.next();
+        }
+    };
+
+    const handlePrev = () => {
+        if (carouselRef1.current && carouselRef2.current) {
+            carouselRef1.current.prev();
+            carouselRef2.current.prev();
+        }
+    };
+
+
   return (
-    <div className='w-full flex flex-col items-center justify-center '>
-    <Herosection data={"ABOUT US"}/>
+    <div className='w-full flex flex-col  items-center justify-center gap-[100px] '>
+    {/* <Herosection data={"UI/UX"}/> */}
 
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 pt-24 pb-14 leading-10'>
-<p className='text-4xl font-bold'>Welcome to No Gravity Media
-</p>
-<p className='font-light min-xl:text-2xl min-xl:leading-9  '>where innovation meets excellence in IT solutions. Founded with a vision to redefine the digital landscape, we are a dynamic team of tech enthusiasts dedicated to empowering businesses with cutting-edge technology.
-</p>
-</div>
+<div className='bg-[#141313] min-xl:h-[100vh]  w-screen flex flex-col items-center justify-center pb-[90px] min-xl:pt-[200px]'>
 
-<div className='w-full  flex flex-col items-center justify-center'>
+<div className='xl:h-[80vh] w-[60vw]  flex  flex-col items-center justify-center gap-[100px] '>
+    <p className='text-white text-[80px] font-bold flex text- md:text-[35px] sm-se:[30px] '>    <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+           'UI/UX design agency,molding ideas into products',
+           2000, 
+           // wait 1s before replacing "Mice" with "Hamsters"
+        'UI/UX design agency,molding ideas into prototypes',
+        2000,
+        'UI/UX design agency,molding ideas into brands',
+        2000,
+        'UI/UX design agency,molding ideas into design',
+        2000,
 
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 p- pb-14 '>
-<h1 className='font-bold text-4xl'> Why Choose  <span className='font-extrabold'>No Gravity Media?</span> </h1>
+    'UI/UX design agency,molding ideas into products',
+        2000   
 
-<div className='flex items-cente gap-4 flex-col'>
-{
-  data.map((data,index)=>(
-
-
-<div>
-<p className='min-xl:text-2xl min-xl:leading-9 tracking-wider font-light'><span className='font-bold text:xl '>{data.title}</span> {data.para}</p>
-</div>
-  ))}
-
-</div>
-
-</div>
-
-</div>
-
-
-<div>
-  <img src="https://www.isixsigma.com/wp-content/uploads/2018/11/shutterstock_1687550977-scaled.jpg" alt="" className='w-screen' />
-</div>
-
-
-
-<div className='w-full bg-[#EFF0F1] flex flex-col items-center justify-center'>
-
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 py-8  '>
-<h1 className='font-bold text-4xl'>Our  <span className='font-extrabold'>story</span> </h1>
-
-<p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>No Gravity Media began as a passion project, born out of a desire to revolutionize the way businesses leverage technology to achieve their goals. With a shared vision and a relentless drive for innovation, our founders embarked on a journey to create a company that would not only meet but exceed the expectations of our clients.
-
-</p>
-{/* <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>Our purpose was to do performance marketing, providing integrated data-driven digital marketing solutions and achieving high return on investment for our clients budget.</p>
-<p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>We have evolved, diversified our portfolio of services but one thing remains the same: Data is in our DNA, the pilar that sustains every strategy we develop. Together with our clients, we design and implement disruptive and efficient experiences to satisfy the greatest needs of the brand, the users, and the community.</p> */}
-
-<img src="https://static.vecteezy.com/system/resources/previews/003/001/221/non_2x/freehand-world-map-sketch-on-white-background-free-vector.jpg" alt="" />
-
-<p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'> Be it acquisition, loyalty, or cross/up-selling strategies, we generate a high impact across all business goals, supported by proprietary methodologies. This is because our approach to digital marketing is not focused on the development of digital campaigns, but on the creation of long-term relationships.</p>
-</div>
-
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 py-8  '>
-<h1 className='font-bold text-4xl'>Our  <span className='font-extrabold'>Mission</span> </h1>
-
-<p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>At No Gravity Media, our mission is simple: to empower businesses to reach beyond boundaries. We believe that technology should be a catalyst for growth, driving businesses forward and propelling them to new heights of success. Through our innovative solutions and unwavering commitment to excellence, we aim to be the driving force behind your digital transformation journey.
-
-</p>
-
-<img src="https://www.liquidplanner.com/wp-content/uploads/2013/12/iStock-520289888-2-e1641284826152.jpg" alt="" />
-
-</div>
-
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 py-8  '>
-<h1 className='font-bold text-4xl'>Our  <span className='font-extrabold'>Team</span> </h1>
-
-<p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>Behind every successful project is a dedicated team of professionals, and at No Gravity Media, we are fortunate to have some of the best and brightest minds in the industry. From developers and designers to project managers and digital marketers, each member of our team brings a unique set of skills and perspectives to the table, allowing us to tackle even the most complex challenges with ease.
-</p>
-
-<img src="https://img.freepik.com/premium-photo/team-concept-with-two-man-sunset-background_493806-6439.jpg" alt="" />
-
-</div>
-
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 py-24 '>
-<h1 className='font-bold text-4xl'>Let's <span className='font-extrabold'>Connect</span> </h1>
-
-<p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>Behind every successful project is a dedicated team of professionals, and at No Gravity Media, we are fortunate to have some of the best and brightest minds in the industry. From developers and designers to project managers and digital marketers, each member of our team brings a unique set of skills and perspectives to the table, allowing us to tackle even the most complex challenges with ease.
-</p>
-
-{/* <img src="https://img.freepik.com/premium-photo/team-concept-with-two-man-sunset-background_493806-6439.jpg" alt="" /> */}
-
-</div>
+      ]}
+      wrapper="span"
+      speed={50}
+      style={{  display: 'inline-block' }}
+      repeat={Infinity}
+    /> </p>
 
 
 
 </div>
 
 
+<div 
+      className='self-end flex items-center justify-center gap-[30px] py-[32px] px-[24px]  bg-white  text-black text-[40px] sm:text-[20px] font-bold cursor-pointer'
+      onMouseEnter={() => setHovered(true)} // Set hovered to true on mouse enter
+      onMouseLeave={() => setHovered(false)} // Set hovered to false on mouse leave
+      onClick={() => setstartproject(!startproject)}
+    >
+      Start a Project 
+      <FaArrowRightLong 
+        className={`font-[600] ${hovered ? 'translate-x-2 transition-all duration-300 ease-in-out' : ''}`} // Conditionally apply translate and transition classes
+      />
+    </div>
+
+
+{/* 
+    <div className={ `h-[120vh] w-screen fixed  flex items-center justify-center z-[50] ${startproject?'flex' : 'hidden'}`} style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+
+        <div className='bg-white py-[30px] sm:max-h-[600px] px-[20px] min-xl:max-h-[600px]  md:w-screen overflow-y-auto rounded-md hide-scrollbar'>
+        <div className='float-right cursor-pointer '  onClick={() => setstartproject(!startproject)}><IoCloseSharp className='h-[30px] w-[30px]'/></div>
+    <Form/>
+    </div>
+
+    </div> */}
+
+    <Modal startproject={startproject} setstartproject={setstartproject}/>
+
+
+  
+
+</div>
 
 
 
-  </div>
+<div className='grid grid-cols-3  xl:grid-cols-2 md:grid-cols-1  w-[90vw] gap-[10px] '>
+
+    {
+        
+        gallery_data.map((data,index)=>(
+
+<div className='bg-center bg-cover h-[364px]' style={{backgroundImage: `url(${data})`}} key={index}></div>
+        ))
+    }
+
+</div>
+
+
+<div className='flex xl:flex-col-reverse w-11/12 md:w-11/12 justify-center gap-0 items-center'>
+
+
+<div className="w-[30vw] xl:w-[95vw]  custom-xl-max:w-[92vw] flex flex-col gap-[32px]">
+        <div className="flex flex-col ">
+          <Carousel
+            className="pb-[54px] carousel_categories"
+            ref={carouselRef1}
+            slidesToShow={1}
+            autoplay
+            autoplaySpeed={3000}
+         
+          >
+          
+
+{design_carsouel_content.map((data, index) => (
+              <div className=" " key={index}>
+                <div className='  xl:py-[10px] md:py-0 bg-center bg-cover flex flex-col justify-center xl:items-center gap-5'>
+
+<h1 className='font-bold text-[24px]'>{data.title}</h1>
+<h1 className='text-[24px] text-[grey] font-[300]'>{data.description}</h1>
+<h1 className='text-[18px] xl:text-center'>{data.para}</h1>
+</div>
+
+              </div>
+            ))}
+
+
+
+          </Carousel>
+          <div className="flex gap-5 xl:justify-center">
+            <FaArrowLeftLong
+              onClick={handlePrev}
+              className="h-[40px] w-[40px] cursor-pointer"
+            />
+            <FaArrowRightLong
+              onClick={handleNext}
+              className="h-[40px] w-[40px] cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+<div className="w-[60vw] xl:w-[95vw]  custom-xl-max:w-[92vw] flex flex-col gap-[32px]">
+        <div className="flex flex-col">
+          <Carousel
+            className="pb-[54px] carousel_categories"
+            ref={carouselRef2}
+            slidesToShow={1}
+            autoplay
+            autoplaySpeed={3000}
+         
+          >
+            {design_carsouel.map((data, index) => (
+              <div className="" key={index}>
+
+
+
+
+
+<div className='w-[100%]  h-[550px]  md:h-[300px] bg-center bg-cover' style={{backgroundImage:`url(${data})`}}>
+
+</div>
+              </div>
+            ))}
+          </Carousel>
+      
+        </div>
+      </div>
+
+      
+      </div>
+
+
+<div className='w-11/12 flex flex-col gap-[40px] pb-[100px]'>
+
+<p className='text-4xl font-bold'>Frequently Asked Question</p>
+<div className='w-full flex justify-center'>
+<Faq_comp/>
+</div>
+</div>
+
+
+    </div>
   )
 }
 
-export default Social_media
+export default Ui_ux
