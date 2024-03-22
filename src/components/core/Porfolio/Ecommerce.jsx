@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
-const Education = () => {
-
-  const data =[
-  //   {
-  //     title:"",
-  //     link:"",
-  //     para:""
-  // },
+const data =[
+    {
+      title:"Astro Ratan",
+      link:"https://astroratan.in/",
+      para:"Platform to help accelerate financial inclusion in India by providing scalable tech infrastructure to wealth managers and investment professionals."
+  },
   ]
+
+const Ecommerce = () => {
   return (
     <div className='flex flex-col gap-[20px]'>
-   <h1 className='font-semibold text-[34px]'>Education</h1>
+   <h1 className='font-semibold text-[34px]'>E Commerce</h1>
 
    <div className='border-r-4 border'>
 
@@ -40,4 +40,4 @@ const Education = () => {
   )
 }
 
-export default Education
+export default Ecommerce

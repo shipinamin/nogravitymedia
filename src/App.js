@@ -21,7 +21,11 @@ import  POS  from "./components/Subpages/POS";
 import  LMS  from "./components/Subpages/LMS";
 import Ui_ux from "./components/Subpages/Ui_ux";
 import Customcrm from "./components/Subpages/Customcrm";
-// import Fintech from "./components/core/Porfolio/Fintech";
+import Fintech from "./components/core/Porfolio/Fintech";
+import Health_and_Wellness from "./components/core/Porfolio/Health_and_Wellness";
+import Ecommerce from "./components/core/Porfolio/Ecommerce";
+import Content from "./components/core/Porfolio/Content";
+import Education from "./components/core/Porfolio/Education";
 
 
 function App() {
@@ -40,7 +44,31 @@ function App() {
       <Route path="/" element={<Homepage />} />
       <Route path="/About us" element={<About />} />
       <Route path="/Services" element={<Digitalservice />} />
-      <Route path="/Portfolio" element={<Portfolio/>} />
+
+
+      <Route path="/Portfolio" element={<Portfolio/>} >
+
+
+
+      <Route path="/Portfolio/Fintech" element={<Fintech />} />
+      <Route path="/Portfolio/E-commerce" element={<Ecommerce />} />
+      <Route path="/Portfolio/Content" element={<Content />} />
+      <Route path="/Portfolio/Education" element={<Education/>} />
+      <Route path="/Portfolio/Health and Wellness" element={<Health_and_Wellness />} />
+      {/* <Route path="/Education" element={<Education />} />
+      <Route path="/Content " element={<Content />} />
+      <Route path="/Climate " element={<Climate />} />
+      <Route path="/Other  " element={<Other />} /> */}
+
+
+      </Route >
+
+
+
+
+
+
+
       <Route path="/Careers" element={<Careers/>} />
       <Route path="/Contacts" element={<Contact/>} />
       <Route path="/privacy-notice" element={<Privacynotice/>} />

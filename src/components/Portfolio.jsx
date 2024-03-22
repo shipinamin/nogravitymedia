@@ -2,7 +2,7 @@ import React from 'react'
 import Portfoliocard from './Portfoliocard'
 import Herosection from './common/Herosection'
 import Sidebar from './core/Porfolio/Sidebar'
-import {Route, Routes } from "react-router-dom";
+import {Outlet, Route, Routes } from "react-router-dom";
 import Fintech from "../components/core/Porfolio/Fintech"
 import Health_and_Wellness from "../components/core/Porfolio/Health_and_Wellness"
 import Education from "../components/core/Porfolio/Education"
@@ -23,16 +23,18 @@ const Portfolio = () => {
 <Sidebar/>
 
 <div>
-<Fintech />
+{/* <Fintech /> */}
 
-{/* <Routes> */}
-      {/* <Route path="/fintech" element={<Fintech />} />
+{/* <Routes>
+      <Route path="/Portfolio/Fintech" element={<Fintech />} />
       <Route path="/Health and Wellness" element={<Health_and_Wellness />} />
       <Route path="/Education" element={<Education />} />
       <Route path="/Content " element={<Content />} />
       <Route path="/Climate " element={<Climate />} />
-      <Route path="/Other  " element={<Other />} /> */}
-{/* </Routes> */}
+      <Route path="/Other  " element={<Other />} />
+</Routes> */}
+
+<Outlet/>
 
 </div>
 
