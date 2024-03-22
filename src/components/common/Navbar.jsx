@@ -89,7 +89,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
     {data.map((data, index) => (
         <ul key={index} className='flex flex-col gap-5 font-bold  xl:text-l uppercase xl:relative  ' style={{color:Color}}>
             {data === "Business Enquiries" ? (
-                <li className=' xl:py-2 xl:px-10'        onClick={() => setstartproject(!startproject)}><Button data={data} width={'230px'} /></li>) : ( <NavLink to={`/${data}`}>
+                <li className=' xl:py-2 xl:px-10'        onClick={() => setstartproject(!startproject)}><Button data={data} width={'230px'} /></li>) : ( <NavLink to={ data==="Portfolio" ? ("Portfolio/Fintech") : (`/${data}`)   }>
 
 {data== "Services" ?(
   

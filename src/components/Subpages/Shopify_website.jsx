@@ -1,5 +1,8 @@
 import React from 'react'
 import Herosection from '../common/Herosection'
+import Button from "../Button"
+import herobg from "../../assets/Shopify-Development-1.jpg"
+import img1 from "../../assets/shopifypg-img1.jpeg"
 const Shopify_website = () => {
     const data = [
         {
@@ -20,8 +23,54 @@ const Shopify_website = () => {
         },
       ]
   return (
-    <div className='w-full flex flex-col items-center justify-center '>
-    <Herosection data={"ABOUT US"}/>
+    <div className='w-full flex flex-col items-center justify-center gap-[70px]'>
+    {/* <Herosection data={"ABOUT US"}/> */}
+
+    <div className='flex flex-col justify-center bg-cover w-screen items-start xl:items-center min-xl:pl-[150px] xl:pl-[10px] mt-[100px]  py-[70px]' style={{backgroundImage:`url(${herobg})`}}>
+
+
+<div className='w-[80vw] flex flex-col  gap-[30px] '>
+
+<div className='flex flex-col gap-[20px] text-white'>
+<p className='text-5xl  font-[600] xl:text-5xl'>Shopify Development <br /> Company</p>
+{/* <p className='text-6xl font-serif font-[540] text-[#E13B44] xl:text-5xl'>Experience available in an instant.</p> */}
+
+</div>
+
+<p className='text-[white] font-[300] leading-5'>Empower your online store with our Shopify development services. Deliver superior <br /> e-commerce  experiences with advanced store design and adept deployment – and <br /> boost your customer’s journey!
+
+</p>
+
+<div className=''>
+{/* <button className='py-[15px] px-[40px] bg-[#01ABF4] rounded-[0px] text-[white] font-[300] cursor-pointer hover:bg-[#E35C63]'>
+
+Talk To Our Experts!
+</button> */}
+
+<Button data={"Talk To Our Experts!"} className={"bg-[#01ABF4] rounded-full "}/>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div className='w-[90vw] flex flex-col gap-[30px]'>
+<h1 className='text-5xl font-[550] text-[#3D3D3D]'>Transform and Enrich eCommerce Experiences for Your Customers</h1>
+<div className='flex gap-[100px]'>
+  <div className='felx flex-col  leading-[30px]'>
+
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus quo, quam earum illum laboriosam voluptatem! Odit sed, quia voluptate similique optio sint fuga eum soluta modi sit non, aliquam quis at! Quas et eveniet at autem id, consectetur enim.
+  </p>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus quo, quam earum illum laboriosam voluptatem! Odit sed, quia voluptate similique optio sint fuga eum soluta modi sit non, aliquam quis at! Quas et eveniet at autem id, consectetur enim.
+  </p>
+  </div>
+
+  <img src={img1} className='h-[288px]' alt="" />
+</div>
+</div>
 
 <div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 pt-24 pb-14 leading-10'>
 <p className='text-4xl font-bold'>Welcome to No Gravity Media
