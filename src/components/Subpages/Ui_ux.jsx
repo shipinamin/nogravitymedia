@@ -101,10 +101,10 @@ const Ui_ux = () => {
     <div className='w-full flex flex-col  items-center justify-center gap-[100px] '>
     {/* <Herosection data={"UI/UX"}/> */}
 
-<div className='bg-[#141313] min-xl:h-[100vh]  w-screen flex flex-col items-center justify-center pb-[90px] min-xl:pt-[200px]'>
+<div className='bg-[white] min-xl:h-[100vh]  w-screen flex flex-col items-center justify-center pb-[90px] min-xl:pt-[200px]'>
 
 <div className='xl:h-[80vh] w-[60vw]  flex  flex-col items-center justify-center gap-[100px] '>
-    <p className='text-white text-[80px] font-bold flex text- md:text-[35px] sm-se:[30px] '>    <TypeAnimation
+    <p className='text-black text-[80px] font-bold flex text- md:text-[35px] sm-se:[30px] '>    <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
            'UI/UX design agency,molding ideas into products',
@@ -133,7 +133,7 @@ const Ui_ux = () => {
 
 
 <div 
-      className='self-end flex items-center justify-center gap-[30px] py-[32px] px-[24px]  bg-white  text-black text-[40px] sm:text-[20px] font-bold cursor-pointer'
+      className='self-end flex items-center justify-center gap-[30px] py-[32px] px-[24px]  bg-black  text-white text-[40px] sm:text-[20px] font-bold cursor-pointer'
       onMouseEnter={() => setHovered(true)} // Set hovered to true on mouse enter
       onMouseLeave={() => setHovered(false)} // Set hovered to false on mouse leave
       onClick={() => setstartproject(!startproject)}

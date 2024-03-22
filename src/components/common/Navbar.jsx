@@ -41,12 +41,12 @@ const Navbar = () => {
           setBgColor('white');
           setColor('black');
           setshahdow('shadow-md');
-          setborder('cool-link')
+          // setborder('cool-link')
         } else {
           setBgColor('transparent');
           setColor('white');
           setshahdow('none');
-          setborder('coolw-link ')
+          // setborder('coolw-link ')
         }
       }
   
@@ -59,7 +59,7 @@ const Navbar = () => {
 
 
     
-const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "Business Enquiries"]
+const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" , "Business Enquiries"]
 
 
 
@@ -74,7 +74,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "
  <div className='flex items-center gap-2'>
  <img src="https://media.licdn.com/dms/image/C4D0BAQEV5S_Yk72tUw/company-logo_200_200/0/1677983924847?e=1717027200&v=beta&t=ZCWd84VFRLudA1IRr0oroLh0FlMaJsYz0Pf4Wt3ob30" alt="" className='h-[60px] sm:h-[40px]' />            
 
-<p className='font-extrabold text-xl' style={{color:Color}}>NoGravityMedia</p>
+<p className='font-extrabold text-xl text-[#373737]' >NoGravityMedia</p>
 </div>
 </Link>
  <Togglebtn navtoggle={toggleContentVisibility} navbg={setBgColor}  textcolor={setColor}/>
@@ -101,7 +101,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "
 
 {/* <NavLink to={`/${data}`}> */}
 
-    <div className={`tracking-tight xl:text-black cursor-pointer ${border}`}>{data}</div>
+    <div className={`tracking-tight xl:text-black cursor-pointer ${border} text-[#373737]`}>{data}</div>
       {/* <p className='min-xl:hidden'>{'>'}</p> */}
       <p className='min-xl:hidden'><Megamenubtn/></p>
     </div>
@@ -113,7 +113,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "
     <div key={index} className='flex flex-col gap-5 '> 
     {
   services_mega_menu.map((data, index) => (
-      <ul className='flex flex-'>
+      <ul className='flex ' key={index}>
        <Link to={`/${data}`}>
         <li className='coolM-link hover:text-[#F096B8] font-[500]  '>{data}</li>
         </Link>
@@ -128,7 +128,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contacts" , "
     </div>
 </div>):
   (
-    <li className={`tracking-tight xl:text-black cursor-pointer xl:border-t-2  xl:py-2 xl:px-10 xl:w-screen   ${border} `}>{data}</li>
+    <li className={`tracking-tight xl:text-black cursor-pointer xl:border-t-2  xl:py-2 xl:px-10 xl:w-screen   ${border}  text-[#373737] `}>{data}</li>
   )
   
 }

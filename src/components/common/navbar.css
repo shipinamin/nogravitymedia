@@ -1,7 +1,5 @@
-
 .cool-link {
     display: inline-block;
-    /* color: #000; */
     text-decoration: none;
 }
 
@@ -10,18 +8,18 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #000;
+    background: #373737;
     transition: width .3s;
 }
 
 .cool-link:hover::after {
     width: 100%;
 }
+/* 
 
 
 .coolw-link {
     display: inline-block;
-    /* color: #000; */
     text-decoration: none;
 }
 
@@ -39,7 +37,6 @@
 }
 .coolM-link {
     display: inline-block;
-    /* color: #000; */
     text-decoration: none;
 }
 
@@ -57,4 +54,4 @@
 }
 
 
-
+ */

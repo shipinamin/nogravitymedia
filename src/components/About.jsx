@@ -53,7 +53,56 @@ const About = () => {
 
   return (
     <div className='w-full flex flex-col items-center justify-center '>
-      <Herosection data={"ABOUT US"}/>
+      {/* <Herosection data={"ABOUT US"}/> */}
+
+
+
+<div className='flex flex-col justify-center min-xl:h-[100vh]  w-screen items-start xl:items-center min-xl:pl-[150px] xl:pl-[10px]'>
+
+
+<div className='w-[80vw] flex flex-col  gap-[50px] relative min-xl:top-[100px] xl:pt-[200px]'>
+
+<div className='flex flex-col gap-[20px]'>
+<p className='text-6xl font-serif font-[540] xl:text-5xl'>Years of software development</p>
+<p className='text-6xl font-serif font-[540] text-[#E13B44] xl:text-5xl'>Experience available in an instant.</p>
+
+</div>
+
+<p className='text-[#828282] font-[300] leading-5'>We empower Businesses to win in today’s competitive digital economy by providing expert engineering and consultancy services. Choosing the right people, the most appropriate technology and effective and transparent processes,<span className='font-[500]'>we ensure absolute efficiency.</span>  </p>
+
+<div className=''>
+<span className='py-[15px] px-[40px] bg-[#E3333E] rounded-[0px] text-[white] font-[300] cursor-pointer hover:bg-[#E35C63]'>
+
+  Contact us
+</span>
+
+</div>
+
+<div className='w-[80vw]  shadow-lg px-[0px] py-[40px] grid grid-cols-4 relative top-[50px] xl:grid-cols-2 gap-[20px]'>
+
+<div className='flex flex-col items-center justify-center gap-[10px]'>
+  <p className='text-3xl xl:text-2xl font-[500] text-[#515151] '>10+</p>
+  <p className='text-[#8C8C8C] font-[300]'> Countries Covered</p>
+</div>
+<div className='flex flex-col items-center justify-center gap-[10px]'>
+  <p className='text-3xl  xl:text-2xl font-[500] text-[#515151] '>Top 1% firm</p>
+  <p className='text-[#8C8C8C] font-[300]'> Countries Covered</p>
+</div>
+<div className='flex flex-col items-center justify-center gap-[10px]'>
+  <p className='text-3xl xl:text-2xl font-[500] text-[#515151] '>2.5x</p>
+  <p className='text-[#8C8C8C] font-[300] text-center'> Growth in the last 2 years</p>
+</div>
+<div className='flex flex-col items-center justify-center gap-[10px]'>
+  <p className='text-3xl xl:text-2xl font-[500] text-[#515151] '>5-star</p>
+  <p className='text-[#8C8C8C] font-[300]'> Verified rating</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 
 <div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 pt-24 pb-14 leading-10'>
 <p className='text-4xl font-bold'>Welcome to No Gravity Media
