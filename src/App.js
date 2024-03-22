@@ -20,6 +20,7 @@ import  Shopify_website  from "./components/Subpages/Shopify_website";
 import  POS  from "./components/Subpages/POS";
 import  LMS  from "./components/Subpages/LMS";
 import Ui_ux from "./components/Subpages/Ui_ux";
+import Customcrm from "./components/Subpages/Customcrm";
 // import Fintech from "./components/core/Porfolio/Fintech";
 
 
@@ -54,6 +55,7 @@ function App() {
       <Route path="/POS" element={<POS/>} />
       <Route path="/LMS" element={<LMS/>} />
       <Route path="/UI/UX" element={<Ui_ux/>} />
+      <Route path="/Custom Crm" element={<Customcrm/>} />
       {/* <Route path="/fintech" element={<Fintech />} /> */}
 
 

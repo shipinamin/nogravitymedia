@@ -27,8 +27,10 @@ const Contact = () => {
             </div>
 
         
-   <p className='text-[#8D969C] font-extralight'>Preet Vihar, Nirman Vihar, New Delhi, India, 110092</p>
-   <p>Tel.: +351 21 454 45 45</p>
+   <p className='text-[#8D969C] font-extralight'>4,Shankar Vihar, Vikas Marg, Nirman Vihar , Delhi - 110092</p>
+   <p>Tel No. +91 85860 77916</p>
+   <p>Mail - info@pramaniknivesh.com</p>
+   <p>Contact - contact@nogravitymedia.com</p>
  
         </div>
     ))
@@ -36,7 +38,7 @@ const Contact = () => {
 
 <div>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14007.17760244681!2d77.2836692549197!3d28.635923493744013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb5034037b69%3A0x833f7bdabb4ed317!2sPreet%20Vihar%2C%20Delhi%2C%20110092!5e0!3m2!1sen!2sin!4v1709983562528!5m2!1sen!2sin"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.314039669587!2d77.28932910468133!3d28.63645082518907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb8021159857%3A0x9b7f55e9fd943805!2sShankar%20Vihar!5e0!3m2!1sen!2sin!4v1711099207951!5m2!1sen!2sin" 
         // width="600"
         // height="450"
         style={{ border: 0 }}
