@@ -6,6 +6,7 @@ import people1 from '../assets/ourpeople/PHOTO-2024-03-13-15-44-10.jpg'
 import people2 from '../assets/ourpeople/PHOTO-2024-03-13-15-47-19.jpg'
 import people3 from '../assets/ourpeople/WhatsApp Image 2024-03-13 at 18.15.26.jpeg'
 import people4 from '../assets/ourpeople/WhatsApp Image 2024-03-15 at 14.48.38.jpeg'
+import { Link } from 'react-router-dom'
 const About = () => {
 
   const data = [
@@ -71,10 +72,11 @@ const About = () => {
 <p className='text-[#828282] font-[300] leading-5'>We empower Businesses to win in today’s competitive digital economy by providing expert engineering and consultancy services. Choosing the right people, the most appropriate technology and effective and transparent processes,<span className='font-[500]'>we ensure absolute efficiency.</span>  </p>
 
 <div className=''>
-<span className='py-[15px] px-[40px] bg-[#E3333E] rounded-[0px] text-[white] font-[300] cursor-pointer hover:bg-[#E35C63]'>
-
-  Contact us
-</span>
+<Link to="/Contact us">
+  <span className='py-[15px] px-[40px] bg-[#E3333E] rounded-[0px] text-[white] font-[300] cursor-pointer hover:bg-[#E35C63]'>
+    Contact us
+  </span>
+</Link>
 
 </div>
 
