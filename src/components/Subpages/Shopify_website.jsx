@@ -28,7 +28,7 @@ const Shopify_website = () => {
     <div className='w-full flex flex-col items-center justify-center gap-[70px]'>
     {/* <Herosection data={"ABOUT US"}/> */}
 
-    <div className='flex flex-col justify-center bg-cover w-screen items-start xl:items-center  min-xl:pl-[80px] xl:pl-[px] mt-[100px]  py-[70px]' style={{backgroundImage:`url(${herobg})`}}>
+    <div className='flex flex-col justify-center bg-cover w-screen items-start xl:items-center  min-xl:pl-[80px] xl:pl-[px] mt-[100px] xl:mt-[80px] py-[70px]' style={{backgroundImage:`url(${herobg})`}}>
 
 
 <div className='w-[90vw] flex flex-col  gap-[30px] '>
