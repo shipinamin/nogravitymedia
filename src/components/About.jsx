@@ -61,11 +61,11 @@ const About = () => {
 <div className='flex flex-col justify-center min-xl:h-[100vh]  w-screen items-start xl:items-center min-xl:pl-[150px] xl:pl-[10px]'>
 
 
-<div className='w-[80vw] flex flex-col  gap-[50px] relative min-xl:top-[100px] xl:pt-[200px]'>
+<div className='w-[80vw] flex flex-col  gap-[50px] xl:gap-[30px] relative min-xl:top-[100px] xl:pt-[100px]'>
 
 <div className='flex flex-col gap-[20px]'>
-<p className='text-6xl font-serif font-[540] xl:text-5xl'>Years of software development</p>
-<p className='text-6xl font-serif font-[540] text-[#E13B44] xl:text-5xl'>Experience available in an instant.</p>
+<p className='text-6xl font-serif font-[540] xl:text-4xl'>Years of software development</p>
+<p className='text-6xl font-serif font-[540] text-[#E13B44] xl:text-4xl'>Experience available in an instant.</p>
 
 </div>
 

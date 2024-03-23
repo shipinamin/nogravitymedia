@@ -69,7 +69,11 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
 <Modal startproject={startproject} setstartproject={setstartproject}/>
 
  <div className='flex justify-between  xl:w-screen items-center xl:px-[25px] '>
- <Link to='/'>
+ <Link to='/'   onClick={() => {
+                    // Execute your code here
+                    setstartproject(false); // Ensure startproject is set to false to hide any content before scrolling
+                    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page smoothly
+                  }}>
 
  <div className='flex items-center gap-2'>
  <img src="https://media.licdn.com/dms/image/C4D0BAQEV5S_Yk72tUw/company-logo_200_200/0/1677983924847?e=1717027200&v=beta&t=ZCWd84VFRLudA1IRr0oroLh0FlMaJsYz0Pf4Wt3ob30" alt="" className='h-[60px] sm:h-[40px]' />            
@@ -89,7 +93,14 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
     {data.map((data, index) => (
         <ul key={index} className='flex flex-col gap-5 font-bold  xl:text-l uppercase xl:relative  ' style={{color:Color}}>
             {data === "Business Enquiries" ? (
-                <li className=' xl:py-2 xl:px-10'        onClick={() => setstartproject(!startproject)}><Button data={data} width={'230px'} /></li>) : ( <NavLink to={ data==="Portfolio" ? ("Portfolio/Fintech") : (`/${data}`)   }>
+                <li className=' xl:py-2 xl:px-10'        onClick={() => setstartproject(!startproject)}><Button data={data} width={'230px'} /></li>) : ( <NavLink
+                  to={data === "Portfolio" ? "Portfolio/Fintech" : `/${data}`}
+                  onClick={() => {
+                    // Execute your code here
+                    setstartproject(false); // Ensure startproject is set to false to hide any content before scrolling
+                    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page smoothly
+                  }}
+                >
 
 {data== "Services" ?(
   

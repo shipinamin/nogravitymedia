@@ -46,7 +46,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.314039669587!2d7
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         title="Google Maps"
-        className='xl:auto w-[600px] xl:auto h-[450px]'
+        className='xl:w-auto w-[600px] xl:h-auto h-[450px]'
       ></iframe>
     </div>
 

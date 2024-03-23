@@ -1,4 +1,26 @@
-.cool-link {
+
+
+@media (min-width: 1280px) {
+    .cool-link {
+      display: inline-block;
+      text-decoration: none;
+    }
+  
+    .cool-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #373737;
+      transition: width .3s;
+    }
+  
+    .cool-link:hover::after {
+      width: 100%;
+    }
+  }
+  
+/* .cool-link {
     display: inline-block;
     text-decoration: none;
 }
@@ -14,8 +36,10 @@
 
 .cool-link:hover::after {
     width: 100%;
-}
+} */
 /* 
+
+
 
 
 .coolw-link {
