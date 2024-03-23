@@ -35,7 +35,7 @@ const Navbar = () => {
     useEffect(() => {
       function handleScroll() {
         const scrollPosition = window.scrollY;
-        const halfViewportHeight =  window.innerHeight * 0.1;
+        const halfViewportHeight =  window.innerHeight * 0.01;
   
         if (scrollPosition > halfViewportHeight) {
           setBgColor('white');

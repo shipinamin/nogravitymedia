@@ -3,6 +3,8 @@ import Herosection from '../common/Herosection'
 import Button from "../Button"
 import herobg from "../../assets/Shopify-Development-1.jpg"
 import img1 from "../../assets/shopifypg-img1.jpeg"
+import { GiCube } from "react-icons/gi";
+
 const Shopify_website = () => {
     const data = [
         {
@@ -26,18 +28,18 @@ const Shopify_website = () => {
     <div className='w-full flex flex-col items-center justify-center gap-[70px]'>
     {/* <Herosection data={"ABOUT US"}/> */}
 
-    <div className='flex flex-col justify-center bg-cover w-screen items-start xl:items-center min-xl:pl-[150px] xl:pl-[10px] mt-[100px]  py-[70px]' style={{backgroundImage:`url(${herobg})`}}>
+    <div className='flex flex-col justify-center bg-cover w-screen items-start xl:items-center  min-xl:pl-[80px] xl:pl-[px] mt-[100px]  py-[70px]' style={{backgroundImage:`url(${herobg})`}}>
 
 
-<div className='w-[80vw] flex flex-col  gap-[30px] '>
+<div className='w-[90vw] flex flex-col  gap-[30px] '>
 
 <div className='flex flex-col gap-[20px] text-white'>
-<p className='text-5xl  font-[600] xl:text-5xl'>Shopify Development <br /> Company</p>
+<p className='text-5xl  font-[600] xl:text-4xl md:text-3xl'>Shopify Development <br /> Company</p>
 {/* <p className='text-6xl font-serif font-[540] text-[#E13B44] xl:text-5xl'>Experience available in an instant.</p> */}
 
 </div>
 
-<p className='text-[white] font-[300] leading-5'>Empower your online store with our Shopify development services. Deliver superior <br /> e-commerce  experiences with advanced store design and adept deployment – and <br /> boost your customer’s journey!
+<p className='text-[white] font-[300] leading-5 '>Empower your online store with our Shopify development services. Deliver superior <br /> e-commerce  experiences with advanced store design and adept deployment – and <br /> boost your customer’s journey!
 
 </p>
 
@@ -58,19 +60,94 @@ Talk To Our Experts!
 
 
 <div className='w-[90vw] flex flex-col gap-[30px]'>
-<h1 className='text-5xl font-[550] text-[#3D3D3D]'>Transform and Enrich eCommerce Experiences for Your Customers</h1>
-<div className='flex gap-[100px]'>
+<h1 className='text-5xl xl:text-4xl font-[550] text-[#3D3D3D] md:text-3xl'>Transform and Enrich eCommerce Experiences for Your Customers</h1>
+<div className='flex xl:flex-col min-xl:gap-[100px] xl:gap-[20px]'>
   <div className='felx flex-col  leading-[30px]'>
 
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus quo, quam earum illum laboriosam voluptatem! Odit sed, quia voluptate similique optio sint fuga eum soluta modi sit non, aliquam quis at! Quas et eveniet at autem id, consectetur enim.
+  <p className='font-[300]'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus quo, quam earum illum laboriosam voluptatem! Odit sed, quia voluptate similique optio sint fuga eum soluta modi sit non, aliquam quis at! Quas et eveniet at autem id, consectetur enim.
   </p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus quo, quam earum illum laboriosam voluptatem! Odit sed, quia voluptate similique optio sint fuga eum soluta modi sit non, aliquam quis at! Quas et eveniet at autem id, consectetur enim.
+  <p className='font-[300]'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus quo, quam earum illum laboriosam voluptatem! Odit sed, quia voluptate similique optio sint fuga eum soluta modi sit non, aliquam quis at! Quas et eveniet at autem id, consectetur enim.
   </p>
   </div>
 
-  <img src={img1} className='h-[288px]' alt="" />
+  <img src={img1} className='h-[288px] object-cover' alt="" />
 </div>
 </div>
+
+<div className='w-[90vw] flex flex-col items-center justify-center sm:items-start gap-[30px]'>
+<h1 className='text-5xl xl:text-4xl md:text-3xl font-[600] text-[#3D3D3D]'>Our Shopify Development Services</h1>
+
+<p className='font-[300] text-center sm:text-start'>From building a robust Shopify-powered e-commerce store to making your existing website feature-rich with our custom design, Successive Digital has years of proven experience delivering tailor-made Shopify solutions that scale.</p>
+
+
+<div className='grid grid-cols-3 xl:grid-cols-2 md:grid-cols-1 gap-[40px] place-items-center xl:w-full'>
+
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold '>Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+ 
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold '>Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold '>Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold '>Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold '>Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold '>Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+ 
+
+</div>
+
+
+</div>
+
+<div className='w-[90vw] flex flex-col items-center justify-center sm:items-start gap-[30px]'>
+<h1 className='text-5xl xl:text-4xl md:text-3xl font-[600] text-[#3D3D3D] min-xl:text-center '>Build A Shopping Journey That Feels Tailor-Made For “Them” With Our Shopify Expertise</h1>
+
+<p className='font-[300] text-center sm:text-start'>With innovation at the center, our Shopify solutions help businesses optimize their digital store with customized content and streamlined payment experiences.</p>
+
+
+<div className='grid grid-cols-3 xl:grid-cols-2 md:grid-cols-1 gap-[40px] place-items-center xl:w-full'>
+
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold flex gap-[10px] items-center'> <GiCube/> Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold flex gap-[10px] items-center'> <GiCube/> Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold flex gap-[10px] items-center'> <GiCube/> Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px]'>
+<h3 className='text-[#f30e0e] text-xl font-bold flex gap-[10px] items-center'> <GiCube/> Shopify Online Store Setup</h3>
+<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+  </div>
+
+ 
+
+</div>
+
+
+</div>
+
+
+
 
 <div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 pt-24 pb-14 leading-10'>
 <p className='text-4xl font-bold'>Welcome to No Gravity Media
@@ -79,26 +156,6 @@ Talk To Our Experts!
 </p>
 </div>
 
-<div className='w-full  flex flex-col items-center justify-center'>
-
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 p- pb-14 '>
-<h1 className='font-bold text-4xl'> Why Choose  <span className='font-extrabold'>No Gravity Media?</span> </h1>
-
-<div className='flex items-cente gap-4 flex-col'>
-{
-  data.map((data,index)=>(
-
-
-<div>
-<p className='min-xl:text-2xl min-xl:leading-9 tracking-wider font-light'><span className='font-bold text:xl '>{data.title}</span> {data.para}</p>
-</div>
-  ))}
-
-</div>
-
-</div>
-
-</div>
 
 
 <div>
