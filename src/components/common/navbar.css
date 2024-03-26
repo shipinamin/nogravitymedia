@@ -11,7 +11,7 @@
       display: block;
       width: 0;
       height: 2px;
-      background: #373737;
+      background: white;
       transition: width .3s;
     }
   

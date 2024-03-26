@@ -12,9 +12,10 @@ button {
     width: 2rem;
     height: 2rem;
     padding: .25rem;
-    background-color: rgb(29, 29, 31, .7);
-    backdrop-filter: saturate(180%) blur(20px);
-    border: solid 1px rgba(66,66,69,0.7);
+    /* background-color: rgb(29, 29, 31, .7); */
+    /* background-color: white; */
+    /* backdrop-filter: saturate(180%) blur(20px); */
+    /* border: solid 1px rgba(66,66,69,0.7); */
     position: relative;
   }
   

@@ -4,9 +4,9 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background: black;
+    background: white;
     font-family: "Montserrat", sans-serif;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 24px 0px rgba(255, 255, 255, 0.2);
     overflow: hidden;
     cursor: pointer;
     border: none;
@@ -16,7 +16,7 @@ button {
     content: " ";
     width: 0%;
     height: 100%;
-    background: white;
+    background: rgb(130, 130, 130);
     position: absolute;
     transition: all 0.4s ease-in-out;
     right: 0;
@@ -33,7 +33,7 @@ button {
     text-decoration: none;
     width: 100%;
     /* padding: 18px 25px; */
-    color: #fff;
+    color: black;
     font-size: 1.125em;
     font-weight: 700;
     letter-spacing: 0.3em;
