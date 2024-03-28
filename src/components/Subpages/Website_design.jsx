@@ -1,6 +1,6 @@
 import React from 'react'
 import Herosection from '../common/Herosection'
-import bg from '../../assets/pexels-josh-sorenson-1714205.jpg'
+import bg from '../../assets/workspace-1280538_1280.jpg'
 import Button from "../Button"
 import Faq_comp from '../common/Faq_comp';
 const Website_design = () => {
@@ -109,7 +109,7 @@ title:'swift'
   return (
     <div className='w-full flex flex-col items-center justify-center pb-[100px] gap-[80px] '>
     {/* <Herosection data={"Web Development"}/> */}
-    <div className='w-screen h-[100vh] bg-center bg-cover min-xl:pl-[100px] flex items-center backdrop-filter backdrop-blur-2xl' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), transparent), url(https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_1280.jpg)`}}>
+    <div className='w-screen h-[100vh] bg-center bg-cover min-xl:pl-[100px] flex items-center backdrop-filter backdrop-blur-2xl' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(${bg})`}}>
 
 
 <div className='min-xl:w-[50vw] text-white flex flex-col gap-5 xl:px-[30px]'>
@@ -118,7 +118,7 @@ title:'swift'
   WEB DEVELOPMENT SERVICE
 </h1>
 
-<p className='min-xl:leading-[35px] min-xl:text-[24px]  min-xl:tracking-[5px] xl:leading-[30px] xl:text-[18px] xl:tracking-[0.4px] font-[200]'>Our web development team builds high-performing, user-friendly,
+<p className='min-xl:leading-[40px] min-xl:text-[24px]  min-xl:tracking-[5px] xl:leading-[30px] xl:text-[18px] xl:tracking-[0.4px] font-[200]'>Our web development team builds high-performing, user-friendly,
 and secure web products that provide superior customer
 experience and ensure faster growth. Drive your business forward
 and outpace the competition with our full-scale custom web
