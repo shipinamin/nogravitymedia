@@ -72,7 +72,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className='w-full flex flex-col items-center justify-center '>
+    <div className='w-full flex flex-col items-center justify-center gap-[80px]'>
 
 <div className="w-full h-screen bg-cover flex flex-col items-center justify-center gap-16 homepage_hero"  style={{
         backgroundImage: `url(${heroimg})`}}>
@@ -89,6 +89,28 @@ const Homepage = () => {
 
   
   </div>
+
+<div className='w-[100vw]  shadow-lg px-[0px] py-[60px] grid grid-cols-4 relative  xl:grid-cols-2 gap-[20px] bg-[#F0F0F0] '>
+
+<div className='flex flex-col items-center justify-center gap-[10px]'>
+  <p className='text-3xl xl:text-2xl text-[40px]  font-bold '>10+</p>
+  <p className='text-[#8C8C8C] font-[300]'> Countries Covered</p>
+</div>
+<div className='flex flex-col items-center justify-center gap-[10px]'>
+  <p className='text-3xl  xl:text-2xl text-[40px]  font-bold '>Top 1% firm</p>
+  <p className='text-[#8C8C8C] font-[300]'> Countries Covered</p>
+</div>
+<div className='flex flex-col items-center justify-center gap-[10px]'>
+  <p className='text-3xl xl:text-2xl text-[40px]  font-bold '>2.5x</p>
+  <p className='text-[#8C8C8C] font-[300] text-center'> Growth in the last 2 years</p>
+</div>
+<div className='flex flex-col items-center justify-center gap-[10px]'>
+  <p className='text-3xl xl:text-2xl text-[40px]  font-bold '>5-star</p>
+  <p className='text-[#8C8C8C] font-[300]'> Verified rating</p>
+</div>
+
+</div>
+
 
 <div className='w-full flex flex-col items-center justify-center gap-14 py-24'  style={{background :"#EEF0F1"}}>
 

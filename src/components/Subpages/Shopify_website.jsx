@@ -4,7 +4,7 @@ import Button from "../Button"
 import herobg from "../../assets/Shopify-Development-1.jpg"
 import img1 from "../../assets/shopifypg-img1.jpeg"
 import { GiCube } from "react-icons/gi";
-
+import Faq_comp from '../common/Faq_comp';
 const Shopify_website = () => {
     const data = [
         {
@@ -24,8 +24,27 @@ const Shopify_website = () => {
           para:"When you choose No Gravity Media, you can trust that your project is in capable hands. We pride ourselves on delivering reliable, high-quality solutions, on time and within budget",
         },
       ]
+
+
+      const freq_ask_ques=[
+        {
+          questions:"Who is Shopify best suited for?",
+          answers:"Shopify works with all operating systems and automatically gets updated. Shopify works best for small businesses that want to create a true online shop with high functionalities."
+        },
+        {
+          questions:"Can I use my domain name with Shopify?",
+          answers:"Yes, it is easy to register a domain with Shopify. To register your domain, log into the Shopify store admin, click Preferences, then choose Domains & DNS."
+        },
+        {
+          questions:"How much does it cost to develop a Shopify store?",
+          answers:"The medium-sized eCommerce storefront can be developed for $2,500-$3,000. However, the cost varies based on the functionality and features."
+        },
+
+
+      ]
+    
   return (
-    <div className='w-full flex flex-col items-center justify-center gap-[70px]'>
+    <div className='w-full flex flex-col items-center justify-center gap-[70px] pb-[100px]'>
     {/* <Herosection data={"ABOUT US"}/> */}
 
     <div className='flex flex-col justify-center bg-cover w-screen items-start xl:items-center  min-xl:pl-[80px] xl:pl-[px] mt-[100px] xl:mt-[80px] py-[70px]' style={{backgroundImage:`url(${herobg})`}}>
@@ -149,7 +168,7 @@ Talk To Our Experts!
 
 
 
-<div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 pt-24 pb-14 leading-10'>
+{/* <div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 pt-24 pb-14 leading-10'>
 <p className='text-4xl font-bold'>Welcome to No Gravity Media
 </p>
 <p className='font-light min-xl:text-2xl min-xl:leading-9  '>where innovation meets excellence in IT solutions. Founded with a vision to redefine the digital landscape, we are a dynamic team of tech enthusiasts dedicated to empowering businesses with cutting-edge technology.
@@ -160,10 +179,10 @@ Talk To Our Experts!
 
 <div>
   <img src="https://www.isixsigma.com/wp-content/uploads/2018/11/shutterstock_1687550977-scaled.jpg" alt="" className='w-screen' />
-</div>
+</div> */}
 
 
-
+{/* 
 <div className='w-full bg-[#EFF0F1] flex flex-col items-center justify-center'>
 
 <div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 py-8  '>
@@ -172,8 +191,6 @@ Talk To Our Experts!
 <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>No Gravity Media began as a passion project, born out of a desire to revolutionize the way businesses leverage technology to achieve their goals. With a shared vision and a relentless drive for innovation, our founders embarked on a journey to create a company that would not only meet but exceed the expectations of our clients.
 
 </p>
-{/* <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>Our purpose was to do performance marketing, providing integrated data-driven digital marketing solutions and achieving high return on investment for our clients budget.</p>
-<p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>We have evolved, diversified our portfolio of services but one thing remains the same: Data is in our DNA, the pilar that sustains every strategy we develop. Together with our clients, we design and implement disruptive and efficient experiences to satisfy the greatest needs of the brand, the users, and the community.</p> */}
 
 <img src="https://static.vecteezy.com/system/resources/previews/003/001/221/non_2x/freehand-world-map-sketch-on-white-background-free-vector.jpg" alt="" />
 
@@ -207,16 +224,22 @@ Talk To Our Experts!
 <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>Behind every successful project is a dedicated team of professionals, and at No Gravity Media, we are fortunate to have some of the best and brightest minds in the industry. From developers and designers to project managers and digital marketers, each member of our team brings a unique set of skills and perspectives to the table, allowing us to tackle even the most complex challenges with ease.
 </p>
 
-{/* <img src="https://img.freepik.com/premium-photo/team-concept-with-two-man-sunset-background_493806-6439.jpg" alt="" /> */}
 
 </div>
 
 
 
+</div> */}
+
+
+
+<div className='w-11/12 flex flex-col gap-[40px] pb-[100px] items-center'>
+
+<p className='text-4xl font-bold'>Frequently Asked Question</p>
+<div className='w-full flex justify-center'>
+<Faq_comp freq_ask_ques={freq_ask_ques}/>
 </div>
-
-
-
+</div>
 
 
   </div>
