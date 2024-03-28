@@ -204,7 +204,7 @@ title:'swift'
 </div>
 
 <div className=' flex flex-col gap-[40px] items-center'>
-<h1 className='font-bold text-4xl'> Our Web Development Workflow</h1>
+<h1 className='font-bold text-4xl'> Our Workflow</h1>
 <div className='grid grid-cols-3 xl:grid-cols-2 md:grid-cols-1 gap-[40px] place-items-center xl:w-full'>
 
   <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px]  p-[20px] flex flex-col items-start justify-start gap-[10px]'>
