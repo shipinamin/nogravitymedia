@@ -16,8 +16,10 @@ const Navbar = () => {
 
 
     const [bgColor, setBgColor] = useState('transparent');
+    const [py, setpy] = useState('py-[20px]');
+    const [px, setpx] = useState('px-[60px]');
     const [Color, setColor] = useState('white');
-    const [shahdow, setshahdow] = useState('none');
+    const [shadow, setshahdow] = useState('none');
     const [border, setborder] = useState('cool-link');
     const services_mega_menu = [
       "UI/UX",
@@ -41,11 +43,15 @@ const Navbar = () => {
           setBgColor('white');
           setColor('black');
           setshahdow('shadow-md');
+          setpy('py-[15px] ');
+          setpx('py-[15px] ');
           // setborder('cool-link')
         } else {
           setBgColor('transparent');
           setColor('white');
           setshahdow('none');
+          setpy('py-[20px] ');
+          setpx('px-[60px] ');
           // setborder('coolw-link ')
         }
       }
@@ -65,7 +71,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
 
   return (
 
-  <div className={`${shahdow}  w-full flex items-center justify-between   xl:flex-col  fixed xl:px-[20px] px-[40px] py-[30px] xl:py-[15px] z-30 `}  style={{ backgroundColor: bgColor,transition: 'background-color 200ms ease-in-out'}}>
+<div className={`${shadow} ${py} ${px} bg-white shadow-md w-full flex items-center justify-between xl:flex-col fixed xl:px-[20px] px-[40px]    z-30`} style={{  transition: 'background-color 200ms ease-in-out, padding 200ms ease-in-out' }}>
 <Modal startproject={startproject} setstartproject={setstartproject}/>
 
  <div className='flex justify-between  xl:w-screen items-center xl:px-[25px] '>
@@ -118,7 +124,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
     </div>
     }
 
-    <div class="absolute xl:relative hidden bg-white min-xl:shadow-lg p-4 top-[64px] xl:top-[0px]  mt-2 group-hover:block text-black border border-gray-300">
+    <div class="absolute xl:relative hidden bg-white min-xl:shadow-lg p-4 top-[51px] xl:top-[0px]  mt-2 group-hover:block text-black border border-gray-300">
     
     
     <div key={index} className='flex flex-col gap-5 '> 
