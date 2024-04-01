@@ -116,12 +116,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
                 >
 
 {data== "Services" ?(
-  
-<NavLink to={null} onClick={() => {
-
-setIsContentVisible(false);
-}}
->
+  <NavLink to={null} onClick={(e) => e.stopPropagation()}>
   <div class=" group">
     {
 
@@ -140,8 +135,16 @@ setIsContentVisible(false);
     <div key={index} className='flex flex-col gap-5 '> 
     {
   services_mega_menu.map((data, index) => (
-      <ul className='flex ' key={index}>
-       <Link to={`/${data}`}>
+      <ul className='flex ' key={index}
+      
+      >
+       <Link to={`/${data}`}
+             onClick={() => {
+              // Execute your code here
+              setIsContentVisible(false);
+              setchecked(false)
+            }}
+       >
         <li className='coolM-link hover:text-[#F096B8] font-[500]  '>{data}</li>
         </Link>
         
