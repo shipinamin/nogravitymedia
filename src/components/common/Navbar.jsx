@@ -122,8 +122,6 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
 
 
     <div className='flex items-center justify-between  xl:border-t-2  xl:py-2 xl:px-10 xl:w-screen '>
-
-
     <div className={`tracking-tight xl:text-black cursor-pointer  ${border} text-[#373737]`}>{data}</div>
       <p className='min-xl:hidden'><Megamenubtn/></p>
     </div>
@@ -145,7 +143,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
               setchecked(false)
             }}
        >
-        <li className='coolM-link hover:text-[#F096B8] font-[500]  '>{data}</li>
+        <li className='coolM-link hover:text-[#F096B8] font-[500] pl-[40px] '>{data}</li>
         </Link>
         
       </ul>
