@@ -91,7 +91,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
 </div>
 </Link>
  <Togglebtn navtoggle={toggleContentVisibility} 
- setchecked={setchecked}  checked={checked} 
+//  setchecked={setchecked}  checked={checked} 
  navbg={setBgColor}  textcolor={setColor}/>
  {/* <Link to={`/Digital Strategy and Planning`}>
 <div>hellp</div>
@@ -111,16 +111,13 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
                     setstartproject(false); // Ensure startproject is set to false to hide any content before scrolling
                     window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page smoothly
                     setIsContentVisible(false);
-                    setchecked(false)
+                    // setchecked(false)
                   }}
                 >
 
 {data== "Services" ?(
   
-<NavLink to={null} onClick={() => {
-
-setIsContentVisible(false);
-}}
+<NavLink to={null} onClick={() => {}}
 >
   <div class=" group">
     {
