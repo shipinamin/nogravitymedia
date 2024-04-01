@@ -6,6 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 import './navbar.css'
 import Megamenubtn from '../Subpages/Megamenubtn';
 import Modal from './Modal'
+import styles from './navbar.module.css';
 const Navbar = () => {
 
     const [isContentVisible, setIsContentVisible] = useState(false);
@@ -71,7 +72,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
 
   return (
 
-<div className={`${shadow} ${py} ${px} bg-white shadow-md w-full flex items-center justify-between xl:flex-col fixed xl:px-[20px] px-[40px]    z-30`} style={{  transition: 'background-color 200ms ease-in-out, padding 200ms ease-in-out' }}>
+<div className={`${shadow} ${py} ${px} bg-white shadow-md w-full flex items-center justify-between xl:flex-col fixed xl:px-[20px] px-[40px]    z-30`} style={{  transition: 'background-color 200ms ease-in-out, padding 200ms ease-in-out' }}> 
 <Modal startproject={startproject} setstartproject={setstartproject}/>
 
  <div className='flex justify-between  xl:w-screen items-center xl:px-[25px] '>
@@ -100,7 +101,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
         <ul key={index} className='flex flex-col gap-5 font-bold  xl:text-l uppercase xl:relative  ' style={{color:Color}}>
             {data === "Business Enquiries" ? (
                 <li className=' xl:py-2 xl:px-10'        onClick={() => setstartproject(!startproject)}><Button data={data} width={'230px'} /></li>) : ( <NavLink
-                  to={data === "Portfolio" ? "Portfolio/Fintech" : `/${data}`}
+                  to={data === "Portfolio" ? "Portfolio/Fintech" : `/${data}` }
                   onClick={() => {
                     // Execute your code here
                     setstartproject(false); // Ensure startproject is set to false to hide any content before scrolling
@@ -118,7 +119,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
 
 {/* <NavLink to={`/${data}`}> */}
 
-    <div className={`tracking-tight xl:text-black cursor-pointer ${border} text-[#373737]`}>{data}</div>
+    <div className={`tracking-tight xl:text-black cursor-pointer  ${border} text-[#373737]`}>{data}</div>
       {/* <p className='min-xl:hidden'>{'>'}</p> */}
       <p className='min-xl:hidden'><Megamenubtn/></p>
     </div>
@@ -145,7 +146,20 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
     </div>
 </div>):
   (
-    <li className={`tracking-tight xl:text-black cursor-pointer xl:border-t-2  xl:py-2 xl:px-10 xl:w-screen   ${border}  text-[#373737] `}>{data}</li>
+    <li className={` tracking-tight xl:text-black cursor-pointer xl:border-t-2 xl:py-2 xl:px-10 xl:w-screen ${border} text-[#373737] `}>
+    {data}
+  </li>
+    
+
+// {/* <div className={styles.buttonIcon}>
+     
+//      <div className={`${styles.cube} flex flex-col gap-[0px]`}>
+//        <p className={`relative ${styles.side} ${styles.front}`}>{data}</p>
+//        <p className={`relative bottom-[25px] ${styles.side} ${styles.top}`}>{data}</p>
+//      </div>
+//    </div>
+
+//      */}
   )
   
 }
@@ -163,7 +177,16 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
 </div>
 
 
-        
+{/* 
+<div className={styles.buttonIcon}>
+     
+      <div className={`${styles.cube} flex flex-col gap-[0px]`}>
+        <p className={`relative ${styles.side} ${styles.front}`}>hover me</p>
+        <p className={`relative bottom-[25px] ${styles.side} ${styles.top}`}>check it on github</p>
+      </div>
+    </div> */}
+
+
     </div>
 
   )

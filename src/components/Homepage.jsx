@@ -187,14 +187,15 @@ title:'swift'
 </div>
 
 
+
+
 <div className='w-[90vw] flex flex-col gap-[30px]'>
 {/* <h1 className='text-5xl xl:text-4xl font-[550] text-[#3D3D3D] md:text-3xl'>Transform and Enrich eCommerce Experiences for Your Customers</h1> */}
 <div className='flex xl:flex-col min-xl:gap-[100px] xl:gap-[20px]'>
   <div className='flex flex-col gap-[20px]  leading-[30px]'>
   <h1 className='text-4xl xl:text-4xl  text-[#3D3D3D] md:text-3xl font-[700]'>Transform and Enrich eCommerce Experiences for Your Customers</h1>
-  <p className='font-[300]'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus quo, quam earum illum laboriosam voluptatem! Odit sed, quia voluptate similique optio sint fuga eum soluta modi sit non, aliquam quis at! Quas et eveniet at autem id, consectetur enim.
-  </p>
-  <p className='font-[300]'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde necessitatibus quo, quam earum illum laboriosam voluptatem! Odit sed, quia voluptate similique optio sint fuga eum soluta modi sit non, aliquam quis at! Quas et eveniet at autem id, consectetur enim.
+  <p className='font-[300]'>At No Gravity Media, we're not just another business solutions company – we're your strategic partner in achieving unparalleled success.</p>
+  <p className='font-[300]'> With a focus on innovation, technology, and creativity, we offer a comprehensive suite of services designed to elevate your business to new heights. 
   </p>
 
   </div>
