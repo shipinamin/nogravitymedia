@@ -26,6 +26,7 @@ import Health_and_Wellness from "./components/core/Porfolio/Health_and_Wellness"
 import Ecommerce from "./components/core/Porfolio/Ecommerce";
 import Content from "./components/core/Porfolio/Content";
 import Education from "./components/core/Porfolio/Education";
+import Error from "./components/Error";
 
 
 function App() {
@@ -87,7 +88,7 @@ function App() {
       {/* <Route path="/fintech" element={<Fintech />} /> */}
 
 
-
+      <Route path="*" element={<Error />} />
     </Routes>
 
     <Footer/>

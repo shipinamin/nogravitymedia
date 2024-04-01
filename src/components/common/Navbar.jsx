@@ -11,6 +11,7 @@ const Navbar = () => {
 
     const [isContentVisible, setIsContentVisible] = useState(false);
     const [startproject, setstartproject] = useState(false); 
+    const [checked, setchecked] = useState(false); 
     function toggleContentVisibility () {
     setIsContentVisible(!isContentVisible);
 };
@@ -80,6 +81,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
                     // Execute your code here
                     setstartproject(false); // Ensure startproject is set to false to hide any content before scrolling
                     window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page smoothly
+
                   }}>
 
  <div className='flex items-center gap-2'>
@@ -88,7 +90,9 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
 <p className='font-extrabold text-xl text-[#373737]' >NoGravityMedia</p>
 </div>
 </Link>
- <Togglebtn navtoggle={toggleContentVisibility} navbg={setBgColor}  textcolor={setColor}/>
+ <Togglebtn navtoggle={toggleContentVisibility} 
+//  setchecked={setchecked}  checked={checked} 
+ navbg={setBgColor}  textcolor={setColor}/>
  {/* <Link to={`/Digital Strategy and Planning`}>
 <div>hellp</div>
 </Link> */}
@@ -106,26 +110,28 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
                     // Execute your code here
                     setstartproject(false); // Ensure startproject is set to false to hide any content before scrolling
                     window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page smoothly
+                    setIsContentVisible(false);
+                    // setchecked(false)
                   }}
                 >
 
 {data== "Services" ?(
   
+<NavLink to={null} onClick={() => {}}
+>
   <div class=" group">
-    {/* <button class="hover:text-gray-900">Hover me</button> */}{
+    {
 
 
     <div className='flex items-center justify-between  xl:border-t-2  xl:py-2 xl:px-10 xl:w-screen '>
 
-{/* <NavLink to={`/${data}`}> */}
 
     <div className={`tracking-tight xl:text-black cursor-pointer  ${border} text-[#373737]`}>{data}</div>
-      {/* <p className='min-xl:hidden'>{'>'}</p> */}
       <p className='min-xl:hidden'><Megamenubtn/></p>
     </div>
     }
 
-    <div class="absolute xl:relative hidden bg-white min-xl:shadow-lg p-4 top-[51px] xl:top-[0px]  mt-2 group-hover:block text-black border border-gray-300">
+    <div class="absolute xl:relative hidden bg-white min-xl:shadow-lg p-4  xl:top-[0px]   group-hover:block text-black border border-gray-300">
     
     
     <div key={index} className='flex flex-col gap-5 '> 
@@ -144,22 +150,15 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
    
 
     </div>
-</div>):
+</div>
+</NavLink>
+):
   (
     <li className={` tracking-tight xl:text-black cursor-pointer xl:border-t-2 xl:py-2 xl:px-10 xl:w-screen ${border} text-[#373737] `}>
     {data}
   </li>
     
 
-// {/* <div className={styles.buttonIcon}>
-     
-//      <div className={`${styles.cube} flex flex-col gap-[0px]`}>
-//        <p className={`relative ${styles.side} ${styles.front}`}>{data}</p>
-//        <p className={`relative bottom-[25px] ${styles.side} ${styles.top}`}>{data}</p>
-//      </div>
-//    </div>
-
-//      */}
   )
   
 }
