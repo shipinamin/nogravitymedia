@@ -32,22 +32,26 @@ const About = () => {
     {
       name:"Hashir Khan",
       img:people1,
-      desination:"Founder"
+      desination:"Founder",
+      linkedin:""
     },
     {
       name:"Saquib Abdullah",
       img:people2,
-      desination:"Co-Founder"
+      desination:"Co-Founder",
+      linkedin:""
     },
     {
       name:"Dhruv Sharma ",
       img:people4,
-      desination:"UI/UX Designer"
+      desination:"UI/UX Designer",
+      linkedin:"https://www.linkedin.com/in/dhruv-sharma-452a2724a/"
     },
     {
       name:"Nishat Alam",
       img:people3,
-      desination:"Full Stack Developer"
+      desination:"Full Stack Developer",
+      linkedin:"https://www.linkedin.com/in/nishat-alam-0bb021214/"
     },
    
   ]
@@ -61,7 +65,7 @@ const About = () => {
 <div className='flex flex-col justify-center min-xl:h-[100vh]  w-screen items-start xl:items-center min-xl:pl-[150px] xl:pl-[10px]'>
 
 
-<div className='w-[80vw] flex flex-col  gap-[50px] xl:gap-[30px] relative min-xl:top-[100px] xl:pt-[100px]'>
+<div className='w-[80vw] flex flex-col  gap-[50px] xl:gap-[30px] relative min-xl:top-[100px] xl:pt-[170px]'>
 
 <div className='flex flex-col gap-[20px]'>
 <p className='text-6xl font-serif font-[540] xl:text-4xl'>Years of software development</p>
@@ -141,26 +145,43 @@ const About = () => {
 
 
 <div className='w-[80%] xl:w-10/12  flex justify-center flex-col gap-5 pt-24 pb-14 leading-10'>
-<p className='text-4xl font-bold'>Our People
+<p className='text-4xl text-center font-bold'>Our People
 </p>
 
-<div className='grid grid-cols-3  xl:grid-cols-2 md:grid-cols-1 w-full    pb-[50px]  gap-[100px]'>
+{/* <div className='grid grid-cols-3  xl:grid-cols-2 md:grid-cols-1 w-full    pb-[50px]  gap-[100px]'>
 {
 our_peopledata.map((data,index) =>(
 
 <div className=' w-[300px] h-[350px]' key={index}>
-{/* <img src={data.img} alt="" className='w-[337px] h-[337px]'/> */}
 <div className='w-[337px] h-[337px] bg-center bg-cover' style={{backgroundImage: `url("${data.img}")`}}></div>
 <p className='text-[18px] font-bold'>{data.name}</p>
 <p className='text-[18px] font-semibold'>{data.desination}</p>
 </div>
 ))
 }
+</div> */}
+<div className='grid grid-cols-4  xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-full    pb-[50px]  '>
+{
+our_peopledata.map((data,index) =>(
+<div class=" p-4 rounded-lg  sm:flex gap-10 sm:gap-5" key={index}>
+    <div class="flex justify-center">
+        <img src={data.img} alt="Profile Image" class="rounded-full border-4 border-gray-200 w-[200px] h-[200px] sm:w-[90px] sm:h-[90px]   object-cover   object-center transition duration-300 transform hover:scale-110"/>
+        {/* <img src={data.img} alt="Profile Image" class="rounded-full border-4 border-gray-200 w-200 h-200 sm:w-90 sm:h-90 object-cover object-center transition duration-300 transform hover:scale-105"/> */}
+
+        <a href={data.linkedin} target="_blank" className='hover:bg-white shadow-xl h-[30px] w-[30px] rounded-full relative top-[150px] sm:top-[50px] sm:right-[25px] right-[50px] bg-blue-400'></a>
+    </div>
+    <div class="mt-4 text-center sm:text-start">
+        <h2 class="text-2xl sm:text-xl font-semibold">{data.name}</h2>
+        <p class="text-xl sm:text-base font-[500] text-gray-600">{data.desination}</p>
+    </div>
 </div>
 
+))
+}
+</div>
 </div>
 
-
+{/* 
 <div className='w-full bg-[#EFF0F1] flex flex-col items-center justify-center'>
 
 <div className='w-[70%] xl:w-10/12 flex justify-center  flex-col gap-5 py-8  '>
@@ -169,10 +190,6 @@ our_peopledata.map((data,index) =>(
 <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>No Gravity Media began as a passion project, born out of a desire to revolutionize the way businesses leverage technology to achieve their goals. With a shared vision and a relentless drive for innovation, our founders embarked on a journey to create a company that would not only meet but exceed the expectations of our clients.
 
 </p>
-{/* <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>Our purpose was to do performance marketing, providing integrated data-driven digital marketing solutions and achieving high return on investment for our clients budget.</p>
-<p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>We have evolved, diversified our portfolio of services but one thing remains the same: Data is in our DNA, the pilar that sustains every strategy we develop. Together with our clients, we design and implement disruptive and efficient experiences to satisfy the greatest needs of the brand, the users, and the community.</p> */}
-
-{/* <img src="https://static.vecteezy.com/system/resources/previews/003/001/221/non_2x/freehand-world-map-sketch-on-white-background-free-vector.jpg" alt="" /> */}
 
 <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'> Be it acquisition, loyalty, or cross/up-selling strategies, we generate a high impact across all business goals, supported by proprietary methodologies. This is because our approach to digital marketing is not focused on the development of digital campaigns, but on the creation of long-term relationships.</p>
 </div>
@@ -184,7 +201,6 @@ our_peopledata.map((data,index) =>(
 
 </p>
 
-{/* <img src="https://www.liquidplanner.com/wp-content/uploads/2013/12/iStock-520289888-2-e1641284826152.jpg" alt="" /> */}
 
 </div>
 
@@ -194,7 +210,6 @@ our_peopledata.map((data,index) =>(
 <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>Behind every successful project is a dedicated team of professionals, and at No Gravity Media, we are fortunate to have some of the best and brightest minds in the industry. From developers and designers to project managers and digital marketers, each member of our team brings a unique set of skills and perspectives to the table, allowing us to tackle even the most complex challenges with ease.
 </p>
 
-{/* <img src="https://img.freepik.com/premium-photo/team-concept-with-two-man-sunset-background_493806-6439.jpg" alt="" /> */}
 
 </div>
 
@@ -204,13 +219,12 @@ our_peopledata.map((data,index) =>(
 <p className='font-light min-xl:text-2xl min-xl:leading-9 tracking-wider'>Behind every successful project is a dedicated team of professionals, and at No Gravity Media, we are fortunate to have some of the best and brightest minds in the industry. From developers and designers to project managers and digital marketers, each member of our team brings a unique set of skills and perspectives to the table, allowing us to tackle even the most complex challenges with ease.
 </p>
 
-{/* <img src="https://img.freepik.com/premium-photo/team-concept-with-two-man-sunset-background_493806-6439.jpg" alt="" /> */}
 
 </div>
 
 
 
-</div>
+</div> */}
 
 
 

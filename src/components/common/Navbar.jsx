@@ -143,7 +143,7 @@ const data = ["About Us" , "Services" , "Portfolio" , "Careers" , "Contact Us" ,
               setchecked(false)
             }}
        >
-        <li className='coolM-link hover:text-[#F096B8] font-[500] pl-[40px] '>{data}</li>
+        <li className='coolM-link hover:text-[#F096B8] font-[500] xl:pl-[40px] '>{data}</li>
         </Link>
         
       </ul>

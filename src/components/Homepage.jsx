@@ -15,6 +15,10 @@ import partner2 from "../assets/partner2.gif"
 import video1 from '../assets/videos/Yardly Final.mp4'
 import "./homepage.css"
 import { GiCube } from "react-icons/gi";
+import { MdCastle } from "react-icons/md";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiArtificialIntelligence } from "react-icons/gi";
+
 const Homepage = () => {
 
   const data_professionals=[
@@ -153,7 +157,7 @@ title:'swift'
         backgroundImage: `url(${heroimg})`}}>
 
 <div className='font-bold text-white text-7xl text-center	sm:text-4xl w-fit	'>
-   <p className='text-balance'>DATA DRIVEN DEVELOPMENT</p> 
+   <p className='text-balance'>DATA </p> 
     </div>
 
 <div className='flex items-center gap-4 xl:flex-col'>
@@ -210,60 +214,31 @@ title:'swift'
 
   <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px]  p-[20px] flex flex-col items-start justify-start gap-[10px]'>
   <div className='bg-blue-200 p-[10px] rounded-full text-blue-400'>
-  <GiCube className='h-[35px] w-[35px]'/> 
+  <MdCastle className='h-[35px] w-[35px]'/> 
   </div>
 
-<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>Shopify Online Store Setup</h3>
-<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>Banquet's campaign 
+</h3>
+<p className='leading-[25px] font-[300]'>At Banquet, we're thrilled to announce our latest campaign, aiming to elevate your business to new heights.</p>
   </div>
- 
   <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px]  p-[20px] flex flex-col items-start justify-start gap-[10px]'>
   <div className='bg-blue-200 p-[10px] rounded-full text-blue-400'>
-  <GiCube className='h-[35px] w-[35px]'/> 
+  <FaPeopleGroup className='h-[35px] w-[35px]'/> 
   </div>
 
-<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>Shopify Online Store Setup</h3>
-<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>Business Webinar 
+</h3>
+<p className='leading-[25px] font-[300]'>Join us for an enlightening Business Webinar where industry experts will share invaluable insights to drive your success.</p>
   </div>
- 
   <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px]  p-[20px] flex flex-col items-start justify-start gap-[10px]'>
   <div className='bg-blue-200 p-[10px] rounded-full text-blue-400'>
-  <GiCube className='h-[35px] w-[35px]'/> 
+  <GiArtificialIntelligence className='h-[35px] w-[35px]'/> 
   </div>
 
-<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>Shopify Online Store Setup</h3>
-<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
+<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>No gravity media Business Ai tool
+</h3>
+<p className='leading-[25px] font-[300]'>Introducing our groundbreaking No Gravity Media Business AI tool, designed to revolutionize your business operations. </p>
   </div>
- 
-  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px]  p-[20px] flex flex-col items-start justify-start gap-[10px]'>
-  <div className='bg-blue-200 p-[10px] rounded-full text-blue-400'>
-  <GiCube className='h-[35px] w-[35px]'/> 
-  </div>
-
-<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>Shopify Online Store Setup</h3>
-<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
-  </div>
- 
-  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px]  p-[20px] flex flex-col items-start justify-start gap-[10px]'>
-  <div className='bg-blue-200 p-[10px] rounded-full text-blue-400'>
-  <GiCube className='h-[35px] w-[35px]'/> 
-  </div>
-
-<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>Shopify Online Store Setup</h3>
-<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
-  </div>
- 
-  <div className='hover:shadow-2xl rounded-md w-[376px] xl:w-[346px] h-[266px]  p-[20px] flex flex-col items-start justify-start gap-[10px]'>
-  <div className='bg-blue-200 p-[10px] rounded-full text-blue-400'>
-  <GiCube className='h-[35px] w-[35px]'/> 
-  </div>
-
-<h3 className='text-[] text-xl font-bold flex gap-[10px] items-center'>Shopify Online Store Setup</h3>
-<p className='leading-[25px] font-[300]'>Our Shopify experts handle the end-to-end establishment of your online store- from strategizing to installation and custom configuration.</p>
-  </div>
- 
-
- 
 
 </div>
 </div>

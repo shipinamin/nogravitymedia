@@ -9,7 +9,7 @@ src/assets/videos/Yardly Final.mp4
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store
