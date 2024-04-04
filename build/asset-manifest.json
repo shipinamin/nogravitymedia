@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.864a29d5.css",
-    "main.js": "/static/js/main.c80f234f.js",
+    "main.css": "/static/css/main.804589dd.css",
+    "main.js": "/static/js/main.8037190b.js",
     "static/media/Yardly Final.mp4": "/static/media/Yardly Final.5c7d278b1f0bc3192a17.mp4",
     "static/media/Shopify-Development-1.jpg": "/static/media/Shopify-Development-1.61bfd1b5e3f0d64a25f2.jpg",
     "static/media/hero@2x.webp": "/static/media/hero@2x.b0f0e44555b61b210067.webp",
@@ -15,11 +15,11 @@
     "static/media/WhatsApp Image 2024-03-13 at 18.15.26.jpeg": "/static/media/WhatsApp Image 2024-03-13 at 18.15.26.25efaac5d86152d630f5.jpeg",
     "static/media/partner1.webp": "/static/media/partner1.dd0b24eebcaa25c504ae.webp",
     "index.html": "/index.html",
-    "main.864a29d5.css.map": "/static/css/main.864a29d5.css.map",
-    "main.c80f234f.js.map": "/static/js/main.c80f234f.js.map"
+    "main.804589dd.css.map": "/static/css/main.804589dd.css.map",
+    "main.8037190b.js.map": "/static/js/main.8037190b.js.map"
   },
   "entrypoints": [
-    "static/css/main.864a29d5.css",
-    "static/js/main.c80f234f.js"
+    "static/css/main.804589dd.css",
+    "static/js/main.8037190b.js"
   ]
 }
