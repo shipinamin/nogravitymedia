@@ -296,7 +296,7 @@ title:'swift'
     <p className="text-[28px] font-[700] ">30 +</p>
     <p className="text-[22px] text-white font-[200]">mobile development experts</p>
 </div>
-<div className="py-[20px] xl:w-full pl-[10px] w-[250px] h-[150px] text-[#F6AE3A] flex mix-xl:relative top-[20px] flex-col bg-[#031339] rounded-[15px]">
+<div className="py-[20px] xl:w-full pl-[10px] w-[250px] h-[150px] text-[#F6AE3A] flex min-xl:relative top-[20px] flex-col bg-[#031339] rounded-[15px]">
     <p className="text-[28px] font-[700] ">30 +</p>
     <p className="text-[22px] text-white font-[200]">mobile development experts</p>
 </div>
@@ -307,11 +307,11 @@ title:'swift'
 
 <div className="flex gap-[20px]">
 
-<div className="py-[20px] pl-[10px] xl:w-full w-[250px] h-[150px] text-[#F6AE3A] mix-xl:relative right-[20px] flex  flex-col bg-[#031339] rounded-[15px]">
+<div className="py-[20px] pl-[10px] xl:w-full w-[250px] h-[150px] text-[#F6AE3A] min-xl:relative right-[20px] flex  flex-col bg-[#031339] rounded-[15px]">
     <p className="text-[28px] font-[700] ">30 +</p>
     <p className="text-[22px] text-white font-[200]">mobile development experts</p>
 </div>
-<div className="py-[20px] xl:w-full pl-[10px] w-[250px] h-[150px] text-[#F6AE3A] mix-xl:relative top-[20px]  right-[20px]  flex  flex-col bg-[#031339] rounded-[15px]">
+<div className="py-[20px] xl:w-full pl-[10px] w-[250px] h-[150px] text-[#F6AE3A] min-xl:relative top-[20px]  right-[20px]  flex  flex-col bg-[#031339] rounded-[15px]">
     <p className="text-[28px] font-[700] ">30 +</p>
     <p className="text-[22px] text-white font-[200]">mobile development experts</p>
 </div>
