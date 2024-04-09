@@ -359,7 +359,7 @@ title:'swift'
 {
   ourservices.map((data,index)=>(
 
-<div className={`w-[40vw] xl:w-full  cursor-pointer px-[10px] py-[30px] text-[30px] font-[600]  rounded-[10px] tracking-widest  ${(data.title === category.title) ? "bg-[#031339] hover:bg-[#031339] text-[white]" : "hover:bg-[#D0DCFA] bg-[#F4F6FE]"}`} onClick={() => setcategory(ourservices[index])}>
+<div className={`w-[40vw] xl:text-[22px] xl:w-full  cursor-pointer px-[10px] py-[30px] text-[30px] font-[600]  rounded-[10px] tracking-widest  ${(data.title === category.title) ? "bg-[#031339] hover:bg-[#031339] text-[white]" : "hover:bg-[#D0DCFA] bg-[#F4F6FE]"}`} onClick={() => setcategory(ourservices[index])}>
 {
   data.title
 }
@@ -385,7 +385,7 @@ title:'swift'
 
 <div className="flex flex-col gap-[30px] w-[80vw]"> 
 
-<div className="flex flex-col  gap-[20px]">
+<div className="flex xl:flex-col  gap-[20px]">
 
 {
   ourtech.map((data,index)=>(
@@ -403,7 +403,7 @@ title:'swift'
 
 <div>
 
-  <div className="bg-[#F4F6FE] py-[10px] px-[20px] rounded-[10px] w-[40vw]">
+  <div className="bg-[#F4F6FE] py-[10px] px-[20px] rounded-[10px] w-[40vw] xl:w-full">
 
 <p className=" font-[600] text-[#243763]  text-[22px] leading-[50px] ">{techcategory.title}</p>
 <p className="font-[200] text-[#243763]  text-[20px] leading-[30px] pb-[10px]">{techcategory.toppara}</p>
@@ -460,7 +460,7 @@ title:'swift'
 
 
   <div className=" w-screen  text-white bg-[#031339]">
-      <div className="container mx-auto py-12">
+      <div className="w-[90vw] container mx-auto py-12">
         <h2 className="text-3xl font-bold mb-8">E-COMMERCE APPS WE CAN DEVELOP</h2>
         <div className="grid grid-cols-3 xl:grid-cols-1 gap-8">
           {ECOMMERCE_APPS.map((app, index) => (
@@ -474,7 +474,7 @@ title:'swift'
     </div>
 
   <div className=" w-screen  text-black bg-[#FAFBFF]">
-      <div className="container mx-auto py-12">
+      <div className="w-[90vw] container mx-auto py-12">
         <h2 className="text-3xl font-bold mb-8">TECH INNOVATIONS FOR YOUR E-COMMERCE APP</h2>
         <div className="grid grid-cols-2 gap-8 xl:grid-cols-1">
           {ECOMMERCE_APPS.map((app, index) => (
@@ -492,20 +492,18 @@ title:'swift'
 
 <div className="bg-[#FAFBFF] w-screen flex items-center flex-col">
 
-       <div className=" flex xl:flex-col items-center min-xl:gap-[100px]">
-      <div className="container mx-auto py-12">
-        <h2 className="text-3xl font-bold mb-8">READY TO ELEVATE YOUR E-COMMERCE EXPERIENCE?</h2>
-        <div className="  rounded-lg  ">
-          <p className="text-gray-700 w-[50vw] mb-4 md:mb-0">Our mobile app experts are just a call away. Discuss your project with us and discover how we can <span className="font-bold">transform your e-commerce vision</span> into a user-friendly mobile app.</p>
-        </div>
+       <div className=" flex xl:flex-col items-center xl:jusitfy-center xl:w-[90vw] min-xl:gap-[100px]">
+      <div className="container mx-auto xl:flex flex-col justify-center py-12">
+        <h2 className="text-3xl font-bold mb-8 xl:text-center">READY TO ELEVATE YOUR E-COMMERCE EXPERIENCE?</h2>
+          <p className="text-gray-700 min-xl:w-[50vw] mb-4 md:mb-0 xl:text-center">Our mobile app experts are just a call away. Discuss your project with us and discover how we can <span className="font-bold">transform your e-commerce vision</span> into a user-friendly mobile app.</p>
       </div>
           <div className="bg-[#F6AE3A] hover:bg-[#FACE87] text-white font-bold  rounded-md px-[15px] text-nowrap py-[15px] cursor-pointer flex items-center">SCHEDULE A CALL</div>
     </div>
 
-    <div className=" ">
+    <div className="w-[90vw]">
       <div className="container mx-auto py-12">
         <h2 className="text-3xl font-bold mb-8">TESTIMONIALS</h2>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-2  xl:grid-cols-1 min-xl:grid-cols-3 gap-8 ">
           {testimonials.map((testimonial, index) => (
             // <TestimonialCard key={index} {...testimonial} />
 
