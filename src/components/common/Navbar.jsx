@@ -25,13 +25,14 @@ const Navbar = () => {
     const [border, setborder] = useState('cool-link');
     const services_mega_menu = [
       "UI/UX",
-"Digital Strategy and Planning",
+      "Ecommerce",
+      "Shopify Website & Development",
+      "Website Design and Development",
+      "Digital Strategy and Planning",
 
  "Social Media Marketing ",
- "Website Design and Development",
  "Search Engine Optimization",
 "CUSTOM CRM",
- "Shopify Website & Development",
  "POS",
 ]
 

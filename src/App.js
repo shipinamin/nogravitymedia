@@ -26,6 +26,7 @@ import Health_and_Wellness from "./components/core/Porfolio/Health_and_Wellness"
 import Ecommerce from "./components/core/Porfolio/Ecommerce";
 import Content from "./components/core/Porfolio/Content";
 import Education from "./components/core/Porfolio/Education";
+import Ecomerce_dev from "./components/Ecommerce_dev";
 
 
 function App() {
@@ -84,6 +85,7 @@ function App() {
       <Route path="/LMS" element={<LMS/>} />
       <Route path="/UI/UX" element={<Ui_ux/>} />
       <Route path="/Custom Crm" element={<Customcrm/>} />
+      <Route path="/Ecommerce" element={<Ecomerce_dev/>} />
       {/* <Route path="/fintech" element={<Fintech />} /> */}
 
 
