@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TestimonialCard from "./core/Ecommerce/TestimonialCard";
 import { Carousel, Button } from "antd";
 import Form_blackbg from "./common/Form_blackbg";
+import { IoIosContact } from "react-icons/io";
 
 
 const Ecomerce_dev = () => {
@@ -180,7 +181,7 @@ title:'swift'
     {
       name: "Arthur Darde",
       position: "CTO at Otoqi",
-      videoUrl: "https://www.example.com/video1",
+      videoUrl: "https://www.youtube.com/embed/BYOCSftWNYE?si=4iXr0tynEfNm4GqT",
       quote: "They're committed and have the ability to scale up in order to deliver fast."
     },
     {
@@ -273,45 +274,46 @@ title:'swift'
 
   return (
     <div className="flex flex-col justify-center items-center pt-[150px] w-[85vw] gap-[80px]">
-      <div className="flex xl:flex-col justify-between ">
+      <div className="flex xl:flex-col gap-[100px] ">
 
-        <div className="w-[" >
-          <p className="font-[700] text-5xl leading-[60px]">E-COMMERCE  MOBILE APP  DEVELOPMENT  SERVICES</p>
+        <div className="min-xl:w-[35vw] flex items-center min-xl:items-start flex-col gap-[20px]" >
+          <p className="font-[700] text-5xl leading-[60px] xl:text-center">E-COMMERCE  MOBILE APP  DEVELOPMENT  SERVICES</p>
 
-          <p className="font-[300] leading-[30px]">
+          <p className="font-[300] leading-[30px] xl:text-center">
             We offer specialized mobile app development services  to advance your
             e-commerce business, ensuring a captivating  and user-friendly mobile
             shopping experience.
           </p>
+          <div className="bg-[#F6AE3A] hover:bg-[#FACE87] text-white font-bold  rounded-md px-[15px] text-nowrap py-[15px] cursor-pointer flex items-center">SCHEDULE A CALL</div>
         </div>
 
 
-<div className="flex flex-col gap-[10px] text-yellow-400">
+<div className="flex flex-col gap-[20px] text-yellow-400">
 
-<div className="flex gap-[10px] ">
+<div className="flex gap-[20px] ">
 
-<div className="py-[20px] px-[5px] w-[250px] h-[150px]  flex  flex-col bg-[#031339] rounded-[15px]">
-    <p className="">30 +</p>
-    <p className="text-nowrap">mobile development experts</p>
+<div className="py-[20px] pl-[10px] xl:w-full w-[250px] h-[150px] text-[#F6AE3A] flex  flex-col bg-[#031339] rounded-[15px]">
+    <p className="text-[28px] font-[700] ">30 +</p>
+    <p className="text-[22px] text-white font-[200]">mobile development experts</p>
 </div>
-<div className="py-[20px] px-[5px] w-[250px] h-[150px]  flex  flex-col bg-[#031339] rounded-[15px]">
-    <p className="">30 +</p>
-    <p className="text-nowrap">mobile development experts</p>
-</div>
-
-
-
+<div className="py-[20px] xl:w-full pl-[10px] w-[250px] h-[150px] text-[#F6AE3A] flex mix-xl:relative top-[20px] flex-col bg-[#031339] rounded-[15px]">
+    <p className="text-[28px] font-[700] ">30 +</p>
+    <p className="text-[22px] text-white font-[200]">mobile development experts</p>
 </div>
 
-<div className="flex gap-[10px]">
 
-<div className="py-[20px] px-[5px] w-[250px] h-[150px]  flex  flex-col bg-[#031339] rounded-[15px]">
-    <p className="">30 +</p>
-    <p className="text-nowrap">mobile development experts</p>
+
 </div>
-<div className="py-[20px] px-[5px] w-[250px] h-[150px]  flex  flex-col bg-[#031339] rounded-[15px]">
-    <p className="">30 +</p>
-    <p className="text-nowrap">mobile development experts</p>
+
+<div className="flex gap-[20px]">
+
+<div className="py-[20px] pl-[10px] xl:w-full w-[250px] h-[150px] text-[#F6AE3A] mix-xl:relative right-[20px] flex  flex-col bg-[#031339] rounded-[15px]">
+    <p className="text-[28px] font-[700] ">30 +</p>
+    <p className="text-[22px] text-white font-[200]">mobile development experts</p>
+</div>
+<div className="py-[20px] xl:w-full pl-[10px] w-[250px] h-[150px] text-[#F6AE3A] mix-xl:relative top-[20px]  right-[20px]  flex  flex-col bg-[#031339] rounded-[15px]">
+    <p className="text-[28px] font-[700] ">30 +</p>
+    <p className="text-[22px] text-white font-[200]">mobile development experts</p>
 </div>
 
 
@@ -328,16 +330,17 @@ title:'swift'
 
 <div className="flex flex-col gap-[50px]">
 
-<h2 className="font-[700] text-[35px]">WHY CHOOSE US</h2>
+<h2 className="font-[600] text-[35px] xl:text-center">WHY CHOOSE US</h2>
 <div className='grid grid-cols-3 xl:grid-cols-2 md:grid-cols-1 gap-[40px] place-items-center xl:w-full'>
 
 
 {
   datawhy_whoose.map((data,index)=>(
 
-  <div className='hover:shadow-2xl rounded-md w-[376px] bg-[#F4F6FE] xl:w-[346px] h-[266px] border p-[20px] flex flex-col items-start justify-start gap-[10px] ' key={index}>
+  <div className='hover:shadow-2xl text-[#031339] rounded-[15px] xl:w-full w-[376px] bg-[#F4F6FE] xl:w-[346px]  border p-[20px] flex flex-col items-start justify-start gap-[10px] ' key={index}>
+<IoIosContact className="text-[#031339]  h-[30px] w-[30px]"/>
 <h3 className=' text-xl font-bold '>{data.title}</h3>
-<p className='leading-[25px] font-[300]'>{data.para}</p>
+<p className='leading-[25px] font-[200] text-[20px]'>{data.para}</p>
   </div>
      
      ))
@@ -349,14 +352,14 @@ title:'swift'
 
 </div>
 
-<div className="flex gap-[30px] w-[80vw]"> 
+<div className="flex xl:flex-col gap-[30px] w-[80vw]"> 
 
 <div className="flex flex-col gap-[20px]">
 
 {
   ourservices.map((data,index)=>(
 
-<div className={`w-[40vw]  cursor-pointer px-[10px] py-[30px] text-[30px] font-[600]  rounded-[10px] tracking-widest  ${(data.title === category.title) ? "bg-[#031339] hover:bg-[#031339] text-[white]" : "hover:bg-[#D0DCFA] bg-[#F4F6FE]"}`} onClick={() => setcategory(ourservices[index])}>
+<div className={`w-[40vw] xl:w-full  cursor-pointer px-[10px] py-[30px] text-[30px] font-[600]  rounded-[10px] tracking-widest  ${(data.title === category.title) ? "bg-[#031339] hover:bg-[#031339] text-[white]" : "hover:bg-[#D0DCFA] bg-[#F4F6FE]"}`} onClick={() => setcategory(ourservices[index])}>
 {
   data.title
 }
@@ -382,7 +385,7 @@ title:'swift'
 
 <div className="flex flex-col gap-[30px] w-[80vw]"> 
 
-<div className="flex  gap-[20px]">
+<div className="flex flex-col  gap-[20px]">
 
 {
   ourtech.map((data,index)=>(
@@ -422,7 +425,7 @@ title:'swift'
 
 <div class="container mx-auto px-4 py-8">
     <h2 class="text-2xl font-semibold mb-6">OUR E-COMMERCE APP SOLUTIONS</h2>
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid grid-cols-2 xl:grid-cols-1 gap-2">
 
     <div class="bg-white  border-b  border-[#D0DCFA]  p-6 mb-6">
       <h3 class="text-lg font-semibold mb-4">CUSTOM E-COMMERCE MOBILE APPS</h3>
@@ -459,7 +462,7 @@ title:'swift'
   <div className=" w-screen  text-white bg-[#031339]">
       <div className="container mx-auto py-12">
         <h2 className="text-3xl font-bold mb-8">E-COMMERCE APPS WE CAN DEVELOP</h2>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 xl:grid-cols-1 gap-8">
           {ECOMMERCE_APPS.map((app, index) => (
          <div className="border-[#243663] border rounded-[15px] p-6 shadow-md" key={index}>
          <h3 className="text-lg font-semibold mb-4">{app.title}</h3>
@@ -473,9 +476,9 @@ title:'swift'
   <div className=" w-screen  text-black bg-[#FAFBFF]">
       <div className="container mx-auto py-12">
         <h2 className="text-3xl font-bold mb-8">TECH INNOVATIONS FOR YOUR E-COMMERCE APP</h2>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-8 xl:grid-cols-1">
           {ECOMMERCE_APPS.map((app, index) => (
-         <div className="border-grey border rounded-[15px] p-6 cursor-pointer hover:bg-[#F4F6FE]">
+         <div className="border-grey border rounded-[15px] p-6 cursor-pointer hover:bg-[#F4F6FE]" key={index}>
          <h3 className="text-lg font-semibold mb-4">{app.title}</h3>
          <p className="">{app.para}</p>
        </div>
@@ -489,10 +492,10 @@ title:'swift'
 
 <div className="bg-[#FAFBFF] w-screen flex items-center flex-col">
 
-       <div className=" flex items-center gap-[100px]">
+       <div className=" flex xl:flex-col items-center min-xl:gap-[100px]">
       <div className="container mx-auto py-12">
         <h2 className="text-3xl font-bold mb-8">READY TO ELEVATE YOUR E-COMMERCE EXPERIENCE?</h2>
-        <div className="bg-white  rounded-lg  ">
+        <div className="  rounded-lg  ">
           <p className="text-gray-700 w-[50vw] mb-4 md:mb-0">Our mobile app experts are just a call away. Discuss your project with us and discover how we can <span className="font-bold">transform your e-commerce vision</span> into a user-friendly mobile app.</p>
         </div>
       </div>
@@ -506,7 +509,7 @@ title:'swift'
           {testimonials.map((testimonial, index) => (
             // <TestimonialCard key={index} {...testimonial} />
 
-            <div className="bg-white p-6 rounded-lg shadow-md ">
+            <div className=" p-6 rounded-lg shadow-md ">
             <div className="flex items-center mb-4">
               <img src="https://via.placeholder.com/50" alt={testimonial.name} className="w-10 h-10 rounded-full" />
               <div className="ml-3">
@@ -515,10 +518,12 @@ title:'swift'
               </div>
             </div>
             <div className="mb-4">
-              <video controls className="w-full">
+              {/* <video controls className="w-full">
                 <source src={testimonial.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
+
+<iframe className="w-full" height="315" src={testimonial.videoUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <blockquote className="text-gray-700">{testimonial.quote}</blockquote>
           </div>
