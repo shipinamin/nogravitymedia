@@ -337,7 +337,7 @@ title:'swift'
 {
   datawhy_whoose.map((data,index)=>(
 
-  <div className='hover:shadow-2xl text-[#031339] rounded-[15px] xl:w-full w-[376px] bg-[#F4F6FE] xl:w-[346px]  border p-[20px] flex flex-col items-start justify-start gap-[10px] ' key={index}>
+  <div className='hover:shadow-2xl text-[#031339] rounded-[15px] xl:w-full w-[376px] bg-[#F4F6FE]   border p-[20px] flex flex-col items-start justify-start gap-[10px] ' key={index}>
 <IoIosContact className="text-[#031339]  h-[30px] w-[30px]"/>
 <h3 className=' text-xl font-bold '>{data.title}</h3>
 <p className='leading-[25px] font-[200] text-[20px]'>{data.para}</p>
